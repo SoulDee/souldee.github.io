@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 node_js:
-  - 10 # use nodejs v10 LTS
+  - 14.15.3 # use nodejs v10 LTS
 cache: npm
 branches:
   only:
@@ -16,3 +16,5 @@ deploy:
   on:
     branch: main
   local-dir: public
+
+  

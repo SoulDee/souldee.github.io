@@ -1,5 +1,6 @@
 ---
 title: 人力资源机器 (Human Resource Machine) 01 - 15
+date: 2021-6-18 00:00:00
 categories: Games
 tags:
   - Games

@@ -131,7 +131,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -140,7 +140,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -186,6 +186,87 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://souldee.github.io/2021/12/27/deploy-with-qt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="SoulDee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑白世界">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/12/27/deploy-with-qt/" class="post-title-link" itemprop="url">Qt 多平台打包记录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-12-28 00:10:44 / 修改时间：00:54:39" itemprop="dateCreated datePublished" datetime="2021-12-28T00:10:44+08:00">2021-12-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Environment/" itemprop="url" rel="index"><span itemprop="name">Environment</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/27/deploy-with-qt/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://souldee.github.io/2021/12/12/macos-on-vmware/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -209,17 +290,23 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-12-12 19:21:55 / 修改时间：19:44:53" itemprop="dateCreated datePublished" datetime="2021-12-12T19:21:55+08:00">2021-12-12</time>
+      <time title="创建时间：2021-12-12 19:21:55" itemprop="dateCreated datePublished" datetime="2021-12-12T19:21:55+08:00">2021-12-12</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-28 00:54:39" itemprop="dateModified" datetime="2021-12-28T00:54:39+08:00">2021-12-28</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/" itemprop="url" rel="index"><span itemprop="name">编程环境</span></a>
+          <a href="/categories/Environment/" itemprop="url" rel="index"><span itemprop="name">Environment</span></a>
         </span>
     </span>
 
@@ -233,10 +320,100 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下在去看参考链接1，特别是如果你也是 AMD 的 CPU 。如果你是 Inter 的 N 卡，可能问题没这么多。</p>
+          <p>更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。</p>
+<p>有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下在去看参考链接1，特别是如果你也是 AMD 的 CPU 。如果你是 Inter 的 N 卡，可能问题没这么多。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/12/12/macos-on-vmware/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://souldee.github.io/2021/06/17/human-resource-machine-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="SoulDee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑白世界">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/17/human-resource-machine-01/" class="post-title-link" itemprop="url">人力资源机器 (Human Resource Machine) 01 - 15</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-18 00:00:01" itemprop="dateCreated datePublished" datetime="2021-06-18T00:00:01+08:00">2021-06-18</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-28 00:54:39" itemprop="dateModified" datetime="2021-12-28T00:54:39+08:00">2021-12-28</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Games/" itemprop="url" rel="index"><span itemprop="name">Games</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>《人力资源机器》是一款模拟编程的游戏，适合用于学习编程的基本思维，该系列包含了这个游戏的个人解答和思路。可直接复制下面内容，进入游戏相应的关卡之后，点击右侧代码编辑栏下方的粘贴即可看到对应的运行代码，然后通过运行来看一下实际的执行顺序。</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/17/human-resource-machine-01/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -298,7 +475,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-12 19:44:53" itemprop="dateModified" datetime="2021-12-12T19:44:53+08:00">2021-12-12</time>
+        <time title="修改时间：2021-12-28 00:54:39" itemprop="dateModified" datetime="2021-12-28T00:54:39+08:00">2021-12-28</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -322,95 +499,6 @@
     <div class="post-body" itemprop="articleBody">
           <p>我也不知道为什么又又又重新建了博客。</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://souldee.github.io/2021/06/17/human-resource-machine-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="SoulDee">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黑白世界">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/17/human-resource-machine-01/" class="post-title-link" itemprop="url">人力资源机器 (Human Resource Machine) 01 - 15</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-06-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-18T00:00:00+08:00">2021-06-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-12 19:44:53" itemprop="dateModified" datetime="2021-12-12T19:44:53+08:00">2021-12-12</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Games/" itemprop="url" rel="index"><span itemprop="name">Games</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>《人力资源机器》是一款模拟编程的游戏，适合用于学习编程的基本思维，该系列包含了这个游戏的个人解答和思路。可直接复制下面内容，进入游戏相应的关卡之后，点击右侧代码编辑栏下方的粘贴即可看到对应的运行代码，然后通过运行来看一下实际的执行顺序。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/17/human-resource-machine-01/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 

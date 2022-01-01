@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-放一张效果图 ![iTerm2 config](https://wx1.sinaimg.cn/mw2000/005MrLQ9ly1gxyot8qothj31cc0xyqv5.jpg)
+放一张效果图 ![iTerm2 config](/images/iTerm2-config.png)
 
 ## Terminal
 

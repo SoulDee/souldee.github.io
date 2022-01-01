@@ -23,6 +23,8 @@ tags:
 # curl
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# or
+
 # wget , install wget before ohmyzsh if you using wget
 brew install wget
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -30,7 +32,7 @@ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O 
 
 ## Theme
 
-首选配置一个 zsh 的渲染主题，从 *[Theme wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)* 中选择一个你喜欢的主题的名称，这里选择 *agnoster* ，然后配置主题。
+首先配置一个 zsh 的渲染主题（不是文字颜色主题），从 *[Theme wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes)* 中选择一个你喜欢的主题的名称，这里选择 *agnoster* ，然后配置主题。
 
 ```bash
 # 1. Open config file
@@ -60,7 +62,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-经过上面配置后再次打开 itrem2 后就会有自动补全和代码高亮的效果。
+经过上面配置后再次打开 iTerm2 后就会有自动补全和代码高亮的效果。
 
 
 ## Font
@@ -92,16 +94,18 @@ cd fonts
 
 右下角 *Color Presets* 选择任意喜欢的主题，然后基于这个主题进行调整，*Basic Colors* 主要是基本颜色，右边的 *ANSI Colors* 则是各种状态的颜色，例如链接，命令，文件，补全文本等等，可以直接修改，iTerm2 会实时变更的。
 
-如果你只想要更多的配色，而不想要自己慢慢调整，那么可以可以看看 *[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)*，里面的主题不仅仅能用在 iTerm2 中。
+如果你只想要更多的配色，而不想要自己慢慢调整，那么可以看看 *[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)* ，里面的主题不仅仅能用在 iTerm2 中。
 
 ```bash
 #  Download iT er m-Color-Schemes
 git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth 1
 ```
 
-在项目中找到想要的主题的名字，例如 *3024 Day*，或者也可以按住 *shift/command* 进行多选打开。
+在项目中找到想要的主题的名字，例如 *3024 Day*
 
 通过 *Profiles>Open Profiles>Edit Profiles>Colors* 中右下角 *Color Presets>Import* ,然后选择 *Term2-Color-Schemes>schemes>3024 Day.itermcolors* 文件。
+
+或者也可以按住 *shift/command* 进行多选打开多个主题。
 
 ## Reference
 

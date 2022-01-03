@@ -25,17 +25,17 @@ Windows 下打包应该是最容易的，直接只用 Qt 提供的工具运行�
 
 
 1. 环境变量配置，Windows 的环境变量不多说了，需要配置的是下面这样的路径
-```Bash
+```bash
 C:\Qt\5.15.2\5.15.2\msvc2019_64\bin
 ```
 2. 假设应用名称为 TestApp，Qt Creator 中 Realease 模式运行一次
 3. 找到 Realease 路径中同名应用复制到 TestApp 文件夹
 4. 终端运行下方内容
-```
+```bash
 windeployqt TestApp
 ```
 4. 对于最终生成的代码可以进行一些适当的删除
-```Bash
+```bash
 # 这几个在 Widget 开发中基本都有用到
 Qt5Widgets.dll # widgets 模块，QML 应用可以删除
 Qt5Gui # Gui 基本是要的
@@ -74,7 +74,7 @@ macOS 比较特殊的一点是芯片分为了 intel 架构和 m1 芯片的 arm �
 1. 需要先商店安装 xcode，不然会缺少 kits
 2. 【可选】macOS 虚拟机卡顿严重，可以参考链接 9 优化一下
 3. 配置 macdeployqt 命令
-```
+```bash
 sudo vim ~/.zshrc
 
 # 插入以下内容后保存
@@ -90,7 +90,7 @@ echo $PATH
 4. 假设应用名称 TestApp，在Qt Creator 中 Release 模式运行一次
 5. 找到 Release 路径，拷贝 TestApp 到同名文件夹
 6. 移动到同名文件夹打开终端
-```
+```bash
 macdeployqt TestApp.app -dmg
 ```
 7. 将打包好的 dmg 文件发给别人吧
@@ -112,7 +112,7 @@ linux 下打包会比较麻烦，需要说明的是，Ubuntu 的版本和 Qt 的
 1. 安装包 [qt-opensource-linux-x64-5.14.2.run](https://mirrors.tuna.tsinghua.edu.cn/qt/archive/qt/5.14/5.14.2/qt-opensource-linux-x64-5.14.2.run)，如果不能拖拽需要通过 **虚拟机-安装 VMware Tools **来安装相关工具。
 2. 然后双击安装，选择组件时记得选择 Qt5.14.2/Desktop gcc 64-bit
 3. 【可选】更换 Ubuntu 的apt 镜像源为 [阿里云ubuntu 镜像](https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11ZMu5Np) ，具体更换步骤点进去查看，注意系统版本。下面方便使用复制了 18.04 的源。
-```Bash
+```bash
 sudo vim /etc/apt/sources.list
 
 # 将这个文件内容替换为以下内容
@@ -133,7 +133,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 
 ```
 4. 在终端中安装环境包
-```
+```bash
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install build-essential
@@ -150,7 +150,7 @@ sudo apt-get install libqt4-dev
 
 2. 配置 linuxdeployqt 命令
 
-```
+```bash
 # 重命名
 mv linuxdeployqt-continuous-x86_64.AppImage linuxdeployqt
 
@@ -163,7 +163,7 @@ linuxdeployqt --version
 
 3. 配置Qt 环境变量
 
-```
+```bash
 # 将下面的[gcc 目录]替换为你得 Qt 安装目录下的 gcc 路径
 
 # 使用 sudo 打开 ~/.bashrc 并在末尾插入以下内容
@@ -193,7 +193,7 @@ Comment=一些描述
 Categories=Utility;
 ```
 9. 【可选】添加 **libqgtk2 & libqgtk2style** ，避免一些打包错误
-```Bash
+```bash
 # if Error message
 WARNING: Plugin "/usr/lib/x86_64-linux-gnu/qt4/plugins/platformthemes/libqgtk2.so" not found, skipping
 WARNING: Plugin "/usr/lib/x86_64-linux-gnu/qt4/plugins/styles/libqgtk2style.so" not found, skipping
@@ -209,7 +209,7 @@ sudo make install
 cd -
 ```
 10. 打开终端运行打包 ，这样我们得到打包后的 .AppImage 文件了，将它发送给其他人使用吧
-```
+```bash
 linuxdeployqt TestApp -appimage
 ```
 

@@ -6,14 +6,14 @@
 title: 黑白世界
 subtitle: 'Coding......'
 description: ''
-keywords: Souldee
+keywords: Souldee Programmer
 author: SoulDee
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://souldee.github.io
+url: https://www.souldee.com/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -44,14 +44,14 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''

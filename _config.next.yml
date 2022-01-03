@@ -368,8 +368,8 @@
       light: ocean
       dark: ocean
     prism:
-      light: prism
-      dark: prism-dark
+      light: prism-atom-dark
+      dark: prism-atom-dark
     # Add copy button on codeblock
     copy_button:
       enable: true

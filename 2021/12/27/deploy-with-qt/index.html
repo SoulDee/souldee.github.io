@@ -27,9 +27,10 @@
 <meta property="og:description" content="本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-27T16:10:44.000Z">
-<meta property="article:modified_time" content="2022-01-03T18:42:20.541Z">
+<meta property="article:modified_time" content="2022-01-10T17:54:21.788Z">
 <meta property="article:author" content="SoulDee">
 <meta property="article:tag" content="Qt">
+<meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85"><span class="nav-number">1.2.</span> <span class="nav-text">打包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#macOS"><span class="nav-number">2.</span> <span class="nav-text">macOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-1"><span class="nav-number">2.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85-1"><span class="nav-number">2.2.</span> <span class="nav-text">打包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">3.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-2"><span class="nav-number">3.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85-linuxdeployqt"><span class="nav-number">3.3.</span> <span class="nav-text">打包 linuxdeployqt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85-Qt-Installer-Framework"><span class="nav-number">3.4.</span> <span class="nav-text">打包 Qt Installer Framework</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows"><span class="nav-number">1.</span> <span class="nav-text">Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85"><span class="nav-number">1.2.</span> <span class="nav-text">打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">静态文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#macOS"><span class="nav-number">2.</span> <span class="nav-text">macOS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-1"><span class="nav-number">2.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85-1"><span class="nav-number">2.2.</span> <span class="nav-text">打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6-1"><span class="nav-number">2.3.</span> <span class="nav-text">静态文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux"><span class="nav-number">3.</span> <span class="nav-text">Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83-2"><span class="nav-number">3.1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85-linuxdeployqt"><span class="nav-number">3.3.</span> <span class="nav-text">打包 linuxdeployqt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85-Qt-Installer-Framework"><span class="nav-number">3.4.</span> <span class="nav-text">打包 Qt Installer Framework</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6-2"><span class="nav-number">3.5.</span> <span class="nav-text">静态文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -136,20 +137,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -227,7 +228,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-04 02:42:20" itemprop="dateModified" datetime="2022-01-04T02:42:20+08:00">2022-01-04</time>
+        <time title="修改时间：2022-01-11 01:54:21" itemprop="dateModified" datetime="2022-01-11T01:54:21+08:00">2022-01-11</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,6 +237,10 @@
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Environment/" itemprop="url" rel="index"><span itemprop="name">Environment</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Environment/Qt/" itemprop="url" rel="index"><span itemprop="name">Qt</span></a>
         </span>
     </span>
 
@@ -287,6 +292,7 @@ libGLESv2.dll <span class="token comment"># OpenGL</span>
 <li><p>启动 TestApp.exe 直接可用，然后将全部压缩成压缩包发给其他人吧。</p>
 </li>
 </ol>
+<h3 id="静态文件"><a href="#静态文件" class="headerlink" title="静态文件"></a>静态文件</h3><p>windows 下不想打包到 exe 的静态文件，可以在运行打包后直接放入根目录</p>
 <h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>macOS 比较特殊的一点是芯片分为了 intel 架构和 m1 芯片的 arm 架构，需要分别打包，而 Qt 6.2 版本才支持 arm 架构，打包步骤没什么差别。此外要 Qt 5.14.2 仅支持 xcode sdk 10.15，所以选择 Qt 6.2.1，也可以选择将 xcode 降级。</p>
 <h3 id="环境-1"><a href="#环境-1" class="headerlink" title="环境"></a>环境</h3><ul>
 <li>macOS Monterey 12.0.1 arm | macOS Big SUr 11.1 intel</li>
@@ -311,6 +317,7 @@ libGLESv2.dll <span class="token comment"># OpenGL</span>
 <li>移动到同名文件夹打开终端<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">macdeployqt TestApp.app -dmg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>将打包好的 dmg 文件发给别人吧</li>
 </ol>
+<h3 id="静态文件-1"><a href="#静态文件-1" class="headerlink" title="静态文件"></a>静态文件</h3><p>macOS 下静态文件，需要在运行 release 后，右键 app 文件显示包内容，然后放进 Contents/MacOs 里。</p>
 <h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>linux 下打包会比较麻烦，需要说明的是，Ubuntu 的版本和 Qt 的版本都会影响环境配置，linuxdeployqt 这个 打包工具当前仅支持到 Ubuntu 18.04，基于这些原因选择当前系统版本和 Qt 版本。</p>
 <h3 id="环境-2"><a href="#环境-2" class="headerlink" title="环境"></a>环境</h3><ul>
 <li>VMware Workstation Pro</li>
@@ -410,6 +417,9 @@ qmake
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">linuxdeployqt TestApp -appimage<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <h3 id="打包-Qt-Installer-Framework"><a href="#打包-Qt-Installer-Framework" class="headerlink" title="打包 Qt Installer Framework"></a>打包 Qt Installer Framework</h3><p>详情请看 <a target="_blank" rel="noopener" href="https://medium.com/geekculture/how-to-deploy-your-qt-cross-platform-applications-to-linux-operating-system-with-qt-installer-ac28258bc370">How to Deploy Your Qt Cross-Platform Applications to Linux Operating System With the Qt Installer Framework - medium</a></p>
+<h3 id="静态文件-2"><a href="#静态文件-2" class="headerlink" title="静态文件"></a>静态文件</h3><p>linux 下静态文件，就不能打包成 AppImage，而是要将相关库文件复制过来，如果是使用 linuxdeployqt 进行打包，只需要修改打包命令的参数。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">linuxdeployqt TestApp -always-overwrite<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/qt/">清华大学开源镜像站</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/balena-io/etcher/issues/1914">Categories= key missing in Linux desktop file · Issue #1914 · balena-io/etcher</a></li>
@@ -449,6 +459,7 @@ qmake
 
           <div class="post-tags">
               <a href="/tags/Qt/" rel="tag"># Qt</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
           </div>
 
         

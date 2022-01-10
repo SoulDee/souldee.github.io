@@ -56,6 +56,9 @@ libGLESv2.dll # OpenGL
 
 5. 启动 TestApp.exe 直接可用，然后将全部压缩成压缩包发给其他人吧。
 
+### 静态文件
+
+windows 下不想打包到 exe 的静态文件，可以在运行打包后直接放入根目录
 
 
 ## macOS
@@ -94,7 +97,9 @@ macdeployqt TestApp.app -dmg
 ```
 7. 将打包好的 dmg 文件发给别人吧
 
+### 静态文件
 
+macOS 下静态文件，需要在运行 release 后，右键 app 文件显示包内容，然后放进 Contents/MacOs 里。
 
 ## Linux
 
@@ -216,7 +221,13 @@ linuxdeployqt TestApp -appimage
 
 详情请看 [How to Deploy Your Qt Cross-Platform Applications to Linux Operating System With the Qt Installer Framework - medium](https://medium.com/geekculture/how-to-deploy-your-qt-cross-platform-applications-to-linux-operating-system-with-qt-installer-ac28258bc370)
 
+### 静态文件
 
+linux 下静态文件，就不能打包成 AppImage，而是要将相关库文件复制过来，如果是使用 linuxdeployqt 进行打包，只需要修改打包命令的参数。
+
+```bash
+linuxdeployqt TestApp -always-overwrite
+```
 
 ## 参考链接
 

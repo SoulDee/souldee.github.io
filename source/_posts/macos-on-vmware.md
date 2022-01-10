@@ -1,10 +1,8 @@
 ---
 title: 📓 VMware 下安装 macOS 踩坑
 date: 2021-12-12 19:21:55
-categories: Environment
-tags:
-  - VMware
-  - macOS
+categories: [Environment, VMware]
+tags: [VMware,macOS]
 ---
 
 更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。

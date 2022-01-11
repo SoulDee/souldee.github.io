@@ -58,6 +58,9 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 # 4. Add starter in the end
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# 5. 没有这个会导致原始环境变量失效
+source ~/.bash_profile
 ```
 
 经过上面配置后再次打开 iTerm2 后就会有自动补全和代码高亮的效果。

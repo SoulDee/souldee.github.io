@@ -1,8 +1,8 @@
 ---
 title: Hello World
 date: 2021-6-18 00:00:00
-categories: [Diary]
-tags: [Diary]
+categories: 随笔
+tags: 随笔
 
 ---
 

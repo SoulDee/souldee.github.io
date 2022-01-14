@@ -1,8 +1,11 @@
 ---
-title: 人力资源机器 (Human Resource Machine) 01 - 15
+title: Human Resource Machine 01 - 15
 date: 2021-6-18 00:00:01
-categories: [Games, Programming]
-tags: [Programming game]
+categories: 
+    - 编程
+tags: 
+    - Programming Game
+    - Human Resource Machine
 
 ---
 

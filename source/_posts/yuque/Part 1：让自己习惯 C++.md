@@ -12,6 +12,7 @@ tags:
 ---
 
 主要讲述的是 C++ 的基础条款，其中条款 01 个人认为是入门 C++ 之前就应当阅读的，能帮助你在学习 C++ 时减少非常多的痛苦和花费的时间精力。而学会 const 的使用能避免许多麻烦，条款 04 提到的问题在我编程中真的是遇到过好几次的问题。
+​
 
 <!-- more -->
 
@@ -74,7 +75,7 @@ private:
 }
 ```
 
-形似函数的宏则应当使用 inline function 来替代，不会有函数宏的多次求值问题，并且有作用域
+形似函数的宏则应当使用 inline function 来替代，不会有函数宏的多次求值问题，并且有作用域：
 
 ```cpp
 template<typename T>
@@ -210,8 +211,3 @@ MyClass &getMyClass() {
 ```
 
 多线程下这样的方式依然有不确定性，解决方法是在启动阶段对这一类对象全部初始化，即 Singleton 的饿汉模式。
-
-### 相关链接
-
-- [《C++ Primer》](https://book.douban.com/subject/25708312/)
-- [《Effective C++》](https://book.douban.com/subject/1842426/)

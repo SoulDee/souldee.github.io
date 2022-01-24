@@ -1,7 +1,7 @@
 ---
 title: Part 6：继承与面向对象设计
 urlname: cgptzc
-date: '2022-01-24 18:10:17 +0800'
+date: '2022-01-24 00:00:06 +0800'
 categories:
   - 编程
   - C++

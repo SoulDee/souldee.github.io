@@ -1,7 +1,7 @@
 ---
 title: Part 8：定制 new 和 delete
 urlname: kbx5el
-date: '2022-01-24 00:12:08 +0800'
+date: '2022-01-24 12:00:08 +0800'
 categories:
   - 编程
   - C++

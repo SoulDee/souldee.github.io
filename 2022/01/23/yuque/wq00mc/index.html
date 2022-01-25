@@ -27,7 +27,7 @@
 <meta property="og:description" content="资源来自系统，用完了就要还，否则将会导致各种问题，例如最常见的动态内存管理不当导致资源泄漏问题。常见的资源还有文件描述符、互斥锁、图形界面的笔刷和字体、数据库连接、网络 sockets。​">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-23T08:00:03.000Z">
-<meta property="article:modified_time" content="2022-01-24T14:01:38.765Z">
+<meta property="article:modified_time" content="2022-01-25T16:45:30.076Z">
 <meta property="article:author" content="SoulDee">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="技巧">
@@ -121,7 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-13%EF%BC%9A%E4%BB%A5%E5%AF%B9%E8%B1%A1%E7%AE%A1%E7%90%86%E8%B5%84%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">条款 13：以对象管理资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-14%EF%BC%9A%E5%9C%A8%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%B1%BB%E4%B8%AD%E5%B0%8F%E5%BF%83-copying-%E8%A1%8C%E4%B8%BA"><span class="nav-number">2.</span> <span class="nav-text">条款 14：在资源管理类中小心 copying 行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-15%EF%BC%9A%E5%9C%A8%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%B1%BB%E4%B8%AD%E6%8F%90%E4%BE%9B%E5%AF%B9%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%BA%90%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="nav-number">3.</span> <span class="nav-text">条款 15：在资源管理类中提供对原始资源的访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-16%EF%BC%9A%E6%88%90%E5%AF%B9%E4%BD%BF%E7%94%A8-new-%E5%92%8C-delete-%E6%97%B6%E8%A6%81%E9%87%87%E5%8F%96%E7%9B%B8%E5%90%8C%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">条款 16：成对使用 new 和 delete 时要采取相同形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-17%EF%BC%9A%E4%BB%A5%E7%8B%AC%E7%AB%8B%E8%AF%AD%E5%8F%A5%E5%B0%86-newed-%E5%AF%B9%E8%B1%A1%E7%BD%AE%E5%85%A5%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="nav-number">5.</span> <span class="nav-text">条款 17：以独立语句将 newed 对象置入智能指针</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-13%EF%BC%9A%E4%BB%A5%E5%AF%B9%E8%B1%A1%E7%AE%A1%E7%90%86%E8%B5%84%E6%BA%90%EF%BC%88C-11%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">条款 13：以对象管理资源（C++11）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-14%EF%BC%9A%E5%9C%A8%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%B1%BB%E4%B8%AD%E5%B0%8F%E5%BF%83-copying-%E8%A1%8C%E4%B8%BA"><span class="nav-number">2.</span> <span class="nav-text">条款 14：在资源管理类中小心 copying 行为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-15%EF%BC%9A%E5%9C%A8%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E7%B1%BB%E4%B8%AD%E6%8F%90%E4%BE%9B%E5%AF%B9%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%BA%90%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="nav-number">3.</span> <span class="nav-text">条款 15：在资源管理类中提供对原始资源的访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-16%EF%BC%9A%E6%88%90%E5%AF%B9%E4%BD%BF%E7%94%A8-new-%E5%92%8C-delete-%E6%97%B6%E8%A6%81%E9%87%87%E5%8F%96%E7%9B%B8%E5%90%8C%E5%BD%A2%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">条款 16：成对使用 new 和 delete 时要采取相同形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E6%AC%BE-17%EF%BC%9A%E4%BB%A5%E7%8B%AC%E7%AB%8B%E8%AF%AD%E5%8F%A5%E5%B0%86-newed-%E5%AF%B9%E8%B1%A1%E7%BD%AE%E5%85%A5%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="nav-number">5.</span> <span class="nav-text">条款 17：以独立语句将 newed 对象置入智能指针</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -228,7 +228,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-24 22:01:38" itemprop="dateModified" datetime="2022-01-24T22:01:38+08:00">2022-01-24</time>
+        <time title="修改时间：2022-01-26 00:45:30" itemprop="dateModified" datetime="2022-01-26T00:45:30+08:00">2022-01-26</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -261,7 +261,7 @@
         <p>资源来自系统，用完了就要还，否则将会导致各种问题，例如最常见的动态内存管理不当导致资源泄漏问题。常见的资源还有文件描述符、互斥锁、图形界面的笔刷和字体、数据库连接、网络 sockets。<br>​</p>
 <span id="more"></span>
 
-<h3 id="条款-13：以对象管理资源"><a href="#条款-13：以对象管理资源" class="headerlink" title="条款 13：以对象管理资源"></a>条款 13：以对象管理资源</h3><p>手动的去管理资源很难保证不会出现资源泄漏，一方面在于代码设计上不能保证获取的资源能释放，例如异常导致的控制流等等，另一方面在于未来接管代码的其他人可能并不知道你获取了资源，然后在释放资源之前就进行了 return 等控制流的转交。</p>
+<h3 id="条款-13：以对象管理资源（C-11）"><a href="#条款-13：以对象管理资源（C-11）" class="headerlink" title="条款 13：以对象管理资源（C++11）"></a>条款 13：以对象管理资源（C++11）</h3><p>手动的去管理资源很难保证不会出现资源泄漏，一方面在于代码设计上不能保证获取的资源能释放，例如异常导致的控制流等等，另一方面在于未来接管代码的其他人可能并不知道你获取了资源，然后在释放资源之前就进行了 return 等控制流的转交。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
     MyClass <span class="token operator">*</span>c <span class="token operator">=</span> <span class="token keyword">new</span> MyClass<span class="token punctuation">;</span>

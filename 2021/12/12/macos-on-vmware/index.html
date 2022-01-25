@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 5.4.1">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -16,9 +16,9 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.souldee.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.souldee.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。 有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="📓 VMware 下安装 macOS 踩坑">
@@ -27,7 +27,7 @@
 <meta property="og:description" content="更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。 有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-12T11:21:55.000Z">
-<meta property="article:modified_time" content="2022-01-25T16:45:30.076Z">
+<meta property="article:modified_time" content="2022-01-25T16:52:10.244Z">
 <meta property="article:author" content="SoulDee">
 <meta property="article:tag" content="VMware">
 <meta property="article:tag" content="macOS">
@@ -38,9 +38,9 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.souldee.com&#x2F;2021&#x2F;12&#x2F;12&#x2F;macos-on-vmware&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;12&#x2F;12&#x2F;macos-on-vmware&#x2F;&quot;,&quot;title&quot;:&quot;📓 VMware 下安装 macOS 踩坑&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.souldee.com/2021/12/12/macos-on-vmware/","path":"2021/12/12/macos-on-vmware/","title":"📓 VMware 下安装 macOS 踩坑"}</script>
 
-<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>📓 VMware 下安装 macOS 踩坑 | 黑白世界</title>
   
 
@@ -70,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">黑白世界</h1>
+      <p class="site-title">黑白世界</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Coding......</p>
@@ -135,21 +135,18 @@
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+        <a href="/archives/">
           <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
+          <a href="/categories/">
         <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
+          <a href="/tags/">
         <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
@@ -223,13 +220,13 @@
 
       <time title="创建时间：2021-12-12 19:21:55" itemprop="dateCreated datePublished" datetime="2021-12-12T19:21:55+08:00">2021-12-12</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-26 00:45:30" itemprop="dateModified" datetime="2022-01-26T00:45:30+08:00">2022-01-26</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-01-26 00:52:10" itemprop="dateModified" datetime="2022-01-26T00:52:10+08:00">2022-01-26</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -333,7 +330,7 @@ mouse.vusb.enable &#x3D; &quot;TRUE&quot;<span aria-hidden="true" class="line-nu
     <footer class="post-footer">
           <div class="reward-container">
   <div>请我喝咖啡!</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+  <button>
     赞赏
   </button>
   <div class="post-reward">
@@ -403,7 +400,6 @@ mouse.vusb.enable &#x3D; &quot;TRUE&quot;<span aria-hidden="true" class="line-nu
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
   
-
 
 
 

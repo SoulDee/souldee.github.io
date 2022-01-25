@@ -7,10 +7,13 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
+
     "sync:yuque": "yuque-hexo sync",
     "clean:yuque": "yuque-hexo clean",
     "yuque": "npm run clean:yuque && npm run sync:yuque",
-    "start": "hexo clean && npm run yuque && hexo s -o"
+    "start": "hexo clean && npm run yuque && hexo s -o",
+
+    "update": "git add . && git ci -m'update doc' && git push"
   },
   "hexo": {
     "version": "5.4.0"

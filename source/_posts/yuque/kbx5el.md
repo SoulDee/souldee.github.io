@@ -1,5 +1,5 @@
 ---
-title: Part 8：定制 new 和 delete
+title: Part 8：定制 new 和 delete（暂略）
 urlname: kbx5el
 date: '2022-01-24 12:00:08 +0800'
 categories:
@@ -11,7 +11,7 @@ tags:
   - 技巧
 ---
 
-正在施工中。。。。。。
+该部分主要讲述如何去定制 new/delete 和 new 的错误处理函数 new-handler，以及定制时需要遵守的规则和时机。
 ​
 
 <!-- more -->

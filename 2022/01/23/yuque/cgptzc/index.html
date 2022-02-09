@@ -27,7 +27,7 @@
 <meta property="og:description" content="讲述了一些继承体系设计的要点，public 和 private 继承各自意味着什么？在继承中容易导致意料之外行为的行为，基类和派生类之间可能的关系，除了 virtual 函数之外还有什么选择？多重继承可能的歧义和用途等内容。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-23T20:00:06.000Z">
-<meta property="article:modified_time" content="2022-02-07T08:14:52.464Z">
+<meta property="article:modified_time" content="2022-02-09T10:57:01.405Z">
 <meta property="article:author" content="SoulDee">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="技巧">
@@ -225,7 +225,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-07 16:14:52" itemprop="dateModified" datetime="2022-02-07T16:14:52+08:00">2022-02-07</time>
+      <time title="修改时间：2022-02-09 18:57:01" itemprop="dateModified" datetime="2022-02-09T18:57:01+08:00">2022-02-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -258,11 +258,10 @@
         <p>讲述了一些继承体系设计的要点，public 和 private 继承各自意味着什么？在继承中容易导致意料之外行为的行为，基类和派生类之间可能的关系，除了 virtual 函数之外还有什么选择？多重继承可能的歧义和用途等内容。</p>
 <span id="more"></span>
 
-<p>​</p>
 <h3 id="条款-32：确定你的-public-继承塑膜出-is-a-关系"><a href="#条款-32：确定你的-public-继承塑膜出-is-a-关系" class="headerlink" title="条款 32：确定你的 public 继承塑膜出 is-a 关系"></a>条款 32：确定你的 public 继承塑膜出 is-a 关系</h3><p>public 继承意味着 is-a 关系，即派生类同时是基类对象，要全盘接受基类的所有可继承内容，而反过来则不成立。除此之外还有 has-a**(条款 38)<strong>和 is-implemented-in-terms-of</strong>(条款 39) **。<br>​</p>
 <p><strong>世界上并不存在适用于所有软件的设计</strong>，在一个软件设计中企鹅是否会飞可能是重要的，因此你需要设计出“飞行鸟类”作为区分来使得不能飞的企鹅合理，然而在另一个软件设计中这可能并不重要，在这个软件系统中或许更关心企鹅的翅膀等特征。<br>​</p>
 <p>在 is-a 继承体系时不要被旧有知识和直觉所囚禁，例如在我们的认知中，正方形是特殊的矩形，应当继承自矩形，然而在 is-a 中这确不对，正方形的宽高不能独立的修改，而矩形却可以。</p>
-<h3 id="条款-33：避免遮掩继承来的名称"><a href="#条款-33：避免遮掩继承来的名称" class="headerlink" title="条款 33：避免遮掩继承来的名称"></a>条款 33：避免遮掩继承来的名称</h3><p>派生类内的名称就遮掩基类名称，包括那些名称相同但参数不同的函数，而根据**条款 32 **我们知道 public 继承应当是 is-a 关系，基类被继承函数应该得到都要体现。</p>
+<h3 id="条款-33：避免遮掩继承来的名称"><a href="#条款-33：避免遮掩继承来的名称" class="headerlink" title="条款 33：避免遮掩继承来的名称"></a>条款 33：避免遮掩继承来的名称</h3><p>派生类内的名称遮掩基类名称，包括那些名称相同但参数不同的函数，而根据**条款 32 **我们知道 public 继承应当是 is-a 关系，基类被继承函数应该得到都要体现。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Base</span> <span class="token punctuation">&#123;</span>
 <span class="token keyword">public</span><span class="token operator">:</span>
     <span class="token keyword">virtual</span> <span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -624,8 +623,8 @@ std<span class="token double-colon punctuation">::</span>list<span class="token 
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/01/23/yuque/tdwmbp/" rel="next" title="Part 7：模板与泛型编程">
-                  Part 7：模板与泛型编程 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/01/23/yuque/tdwmbp/" rel="next" title="Part 7：模板与泛型编程（暂略）">
+                  Part 7：模板与泛型编程（暂略） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

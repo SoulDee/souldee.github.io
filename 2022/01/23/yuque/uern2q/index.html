@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.souldee.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="本章节教我们如何去设计一个良好的类和接口，哪些函数又应当成为非成员版本。​">
+<meta name="description" content="本章节教我们如何去设计一个良好的类和接口，哪些函数又应当成为非成员版本。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Part 4：设计与声明">
 <meta property="og:url" content="https://www.souldee.com/2022/01/23/yuque/uern2q/index.html">
 <meta property="og:site_name" content="黑白世界">
-<meta property="og:description" content="本章节教我们如何去设计一个良好的类和接口，哪些函数又应当成为非成员版本。​">
+<meta property="og:description" content="本章节教我们如何去设计一个良好的类和接口，哪些函数又应当成为非成员版本。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-23T20:00:04.000Z">
-<meta property="article:modified_time" content="2022-02-07T08:14:52.464Z">
+<meta property="article:modified_time" content="2022-02-09T10:57:01.405Z">
 <meta property="article:author" content="SoulDee">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="技巧">
@@ -225,7 +225,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-07 16:14:52" itemprop="dateModified" datetime="2022-02-07T16:14:52+08:00">2022-02-07</time>
+      <time title="修改时间：2022-02-09 18:57:01" itemprop="dateModified" datetime="2022-02-09T18:57:01+08:00">2022-02-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -255,10 +255,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本章节教我们如何去设计一个良好的类和接口，哪些函数又应当成为非成员版本。<br>​</p>
+        <p>本章节教我们如何去设计一个良好的类和接口，哪些函数又应当成为非成员版本。</p>
 <span id="more"></span>
 
-<p>​</p>
 <h3 id="条款-18：让接口容易被正确使用，不易被误用"><a href="#条款-18：让接口容易被正确使用，不易被误用" class="headerlink" title="条款 18：让接口容易被正确使用，不易被误用"></a>条款 18：让接口容易被正确使用，不易被误用</h3><p>让接口易用而不被误用的基本准则是：如果代码通过编译，那么它的行为就应当是符合使用者预期的，否则不应当通过编译。简而言之，就是降低使用者的使用负担，为了实现这样的目的我们需要针对使用者可能犯的错误做一些应对：<br>​</p>
 <p><strong>限制参数类型：</strong>对于参数类型相同，但实际用途不同的接口，容易顺序误用，可以通过外覆类型来对参数的传递进行限制</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Date</span> <span class="token punctuation">&#123;</span>

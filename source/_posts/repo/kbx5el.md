@@ -3,9 +3,9 @@ title: Part 8：定制 new 和 delete（暂略）
 urlname: kbx5el
 date: '2022-01-24 12:00:08 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

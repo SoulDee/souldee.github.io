@@ -3,9 +3,9 @@ title: Part 4：设计与声明
 urlname: uern2q
 date: '2022-01-24 12:00:04 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

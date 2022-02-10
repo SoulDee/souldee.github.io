@@ -3,9 +3,9 @@ title: Part 9：杂项讨论
 urlname: lh9fki
 date: '2022-01-24 12:00:09 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

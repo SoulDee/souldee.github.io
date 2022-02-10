@@ -3,9 +3,9 @@ title: Part 6：继承与面向对象设计
 urlname: cgptzc
 date: '2022-01-24 12:00:06 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

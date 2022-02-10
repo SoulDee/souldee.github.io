@@ -3,9 +3,9 @@ title: Part 5：实现
 urlname: yhlaq4
 date: '2022-01-24 12:00:05 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

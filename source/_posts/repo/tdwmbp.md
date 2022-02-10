@@ -3,9 +3,9 @@ title: Part 7：模板与泛型编程（暂略）
 urlname: tdwmbp
 date: '2022-01-24 12:00:07 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

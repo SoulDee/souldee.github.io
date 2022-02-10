@@ -3,9 +3,9 @@ title: Part 3：资源管理
 urlname: wq00mc
 date: '2022-01-24 12:00:03 +0800'
 categories:
-  - 编程
-  - C++
-  - Effective C++
+  - Program
+  - Cpp
+  - Effective Cpp
 tags:
   - C++
   - 技巧

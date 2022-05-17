@@ -406,7 +406,7 @@
   # `Follow me on GitHub` banner in the top-right corner.
   github_banner:
     enable: false
-    permalink: https://github.com/yourname
+    permalink: https://github.com/souldee
     title: Follow me on GitHub
 
 
@@ -426,7 +426,8 @@
     enable: false
 
     # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-    host:
+    host: https://fonts.lug.ustc.edu.cn/
+
 
     # Font options:
     # `external: true` will load this font family from `host` above.
@@ -873,11 +874,11 @@
 
     # Anime.js
     # For more information: https://animejs.com
-    anime:
+    anime: https://cdn.bootcdn.net/ajax/libs/animejs/3.2.1/anime.js
 
     # Font Awesome
     # For more information: https://fontawesome.com
-    fontawesome:
+    fontawesome: https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css
 
     # Prism
     prism:
@@ -896,7 +897,7 @@
     pjax:
 
     # FancyBox
-    jquery:
+    jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
     fancybox_js:
     fancybox_css:
 

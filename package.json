@@ -44,6 +44,6 @@
     "lastGeneratePath": "lastGeneratePath.log"
   },
   "devDependencies": {
-    "yuque-hexo": "^1.8.0"
+    "yuque-hexo": "^1.9.5"
   }
 }

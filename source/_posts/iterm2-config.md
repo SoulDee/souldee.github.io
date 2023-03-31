@@ -2,11 +2,14 @@
 title: iTerm2 终端配置
 date: 2022-01-01 23:05:56
 categories: 
-    - 编程
-    - 环境配置
+    - Programing
+    - Environment
 tags: 
-    - VMware
-    - terminal
+    - Terminal
+    - macOS
+    - iTerm2
+    - Theme
+    - Font
 ---
 
 最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。

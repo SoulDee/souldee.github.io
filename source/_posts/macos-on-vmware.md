@@ -2,8 +2,8 @@
 title: 📓 VMware 下安装 macOS 踩坑
 date: 2021-12-12 19:21:55
 categories: 
-    - 编程
-    - 环境配置
+    - Programing
+    - Environment
 tags: 
     - VMware
     - macOS

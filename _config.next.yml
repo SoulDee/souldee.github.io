@@ -365,11 +365,11 @@
     # Code Highlight theme
     # All available themes: https://theme-next.js.org/highlight/
     theme:
-      light: ocean
-      dark: ocean
+      light: a11y-light
+      dark: a11y-dark
     prism:
-      light: prism-atom-dark
-      dark: prism-atom-dark
+      light: a11y-light
+      dark: a11y-light
     # Add copy button on codeblock
     copy_button:
       enable: true

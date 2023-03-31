@@ -2,7 +2,7 @@
 title: Human Resource Machine 01 - 15
 date: 2021-6-18 00:00:01
 categories: 
-    - 编程
+    - Programming
 tags: 
     - Programming Game
     - Human Resource Machine

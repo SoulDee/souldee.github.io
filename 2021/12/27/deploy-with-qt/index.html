@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
-
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -18,8 +16,9 @@
 
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"www.souldee.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.souldee.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qt 多平台打包记录">
 <meta property="og:url" content="https://www.souldee.com/2021/12/27/deploy-with-qt/index.html">
@@ -27,7 +26,7 @@
 <meta property="og:description" content="本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-27T16:10:44.000Z">
-<meta property="article:modified_time" content="2022-05-17T09:08:34.027Z">
+<meta property="article:modified_time" content="2023-04-05T11:45:30.055Z">
 <meta property="article:author" content="SoulDee">
 <meta property="article:tag" content="Qt">
 <meta property="article:tag" content="C++">
@@ -47,6 +46,10 @@
 
 
 
+
+
+
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -56,8 +59,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -77,7 +80,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -85,27 +88,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -126,59 +118,47 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="SoulDee"
       src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">SoulDee</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author site-overview-item animated">
+  <div class="links-of-author animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/souldee" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;souldee" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/souldee" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;souldee" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
   </div>
-
-
 
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -196,11 +176,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="SoulDee">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="黑白世界">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Qt 多平台打包记录 | 黑白世界">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -222,7 +207,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-17 17:08:34" itemprop="dateModified" datetime="2022-05-17T17:08:34+08:00">2022-05-17</time>
+      <time title="修改时间：2023-04-05 19:45:30" itemprop="dateModified" datetime="2023-04-05T19:45:30+08:00">2023-04-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -230,11 +215,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+          <a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">环境配置</span></a>
+          <a href="/categories/Programming/Environment/" itemprop="url" rel="index"><span itemprop="name">Environment</span></a>
         </span>
     </span>
 
@@ -258,31 +243,15 @@
 </ul>
 <h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><ol>
 <li><p>环境变量配置，Windows 的环境变量不多说了，需要配置的是下面这样的路径</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">C:<span class="token punctuation">\</span>Qt<span class="token punctuation">\</span><span class="token number">5.15</span>.2<span class="token punctuation">\</span><span class="token number">5.15</span>.2<span class="token punctuation">\</span>msvc2019_64<span class="token punctuation">\</span>bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Qt\5.15.2\5.15.2\msvc2019_64\bin</span><br></pre></td></tr></table></figure></li>
 <li><p>假设应用名称为 TestApp，Qt Creator 中 Realease 模式运行一次</p>
 </li>
 <li><p>找到 Realease 路径中同名应用复制到 TestApp 文件夹</p>
 </li>
 <li><p>终端运行下方内容</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">windeployqt TestApp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">windeployqt TestApp</span><br></pre></td></tr></table></figure></li>
 <li><p>对于最终生成的代码可以进行一些适当的删除</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 这几个在 Widget 开发中基本都有用到</span>
-Qt5Widgets.dll <span class="token comment"># widgets 模块，QML 应用可以删除</span>
-Qt5Gui <span class="token comment"># Gui 基本是要的</span>
-Qt5Core.dll <span class="token comment"># Core 模块</span>
-platforms/qwindows.dll <span class="token comment"># 平台相关插件</span>
-styles <span class="token comment"># Qt 样式表，没用到自定义样式表的话可以删除</span>
-translations <span class="token comment"># 国际化内容，没用到也可以删除</span>
-
-<span class="token comment"># 下面如果代码中没用到都可以删</span>
-iconengines/qsvgicon.dll <span class="token comment"># Svg</span>
-imageformats <span class="token comment"># 各种图片格式的支持，默认png 已经支持，可以删除</span>
-Qt5Svg.dll <span class="token comment"># svg</span>
-opengl32sw.dll <span class="token comment"># OpenGL</span>
-D3Dcompiler_47.dll <span class="token comment"># OpenGL</span>
-libEGL.dl <span class="token comment"># OpenGL</span>
-libGLESv2.dll <span class="token comment"># OpenGL</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这几个在 Widget 开发中基本都有用到</span></span><br><span class="line">Qt5Widgets.dll <span class="comment"># widgets 模块，QML 应用可以删除</span></span><br><span class="line">Qt5Gui <span class="comment"># Gui 基本是要的</span></span><br><span class="line">Qt5Core.dll <span class="comment"># Core 模块</span></span><br><span class="line">platforms/qwindows.dll <span class="comment"># 平台相关插件</span></span><br><span class="line">styles <span class="comment"># Qt 样式表，没用到自定义样式表的话可以删除</span></span><br><span class="line">translations <span class="comment"># 国际化内容，没用到也可以删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面如果代码中没用到都可以删</span></span><br><span class="line">iconengines/qsvgicon.dll <span class="comment"># Svg</span></span><br><span class="line">imageformats <span class="comment"># 各种图片格式的支持，默认png 已经支持，可以删除</span></span><br><span class="line">Qt5Svg.dll <span class="comment"># svg</span></span><br><span class="line">opengl32sw.dll <span class="comment"># OpenGL</span></span><br><span class="line">D3Dcompiler_47.dll <span class="comment"># OpenGL</span></span><br><span class="line">libEGL.dl <span class="comment"># OpenGL</span></span><br><span class="line">libGLESv2.dll <span class="comment"># OpenGL</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li><p>启动 TestApp.exe 直接可用，然后将全部压缩成压缩包发给其他人吧。</p>
 </li>
 </ol>
@@ -295,20 +264,10 @@ libGLESv2.dll <span class="token comment"># OpenGL</span>
 <h3 id="打包-1"><a href="#打包-1" class="headerlink" title="打包"></a>打包</h3><ol>
 <li>需要先商店安装 xcode，不然会缺少 kits</li>
 <li>【可选】macOS 虚拟机卡顿严重，可以参考链接 9 优化一下</li>
-<li>配置 macdeployqt 命令<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> ~/.zshrc
-
-<span class="token comment"># 插入以下内容后保存</span>
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">QT_DEPLOY_PATH</span><span class="token operator">=</span>/Users/你的用户名/Qt/6.2.1/macos/bin
-<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token variable">$QT_DEPLOY_PATH</span><span class="token builtin class-name">:</span><span class="token environment constant">$PATH</span>
-
-<span class="token comment"># 使生效</span>
-<span class="token builtin class-name">source</span> ~/.zshrc
-
-<span class="token comment"># 验证生效，看下有没有刚加入的路径</span>
-<span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>配置 macdeployqt 命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 插入以下内容后保存</span></span><br><span class="line"><span class="built_in">export</span> QT_DEPLOY_PATH=/Users/你的用户名/Qt/6.2.1/macos/bin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QT_DEPLOY_PATH</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证生效，看下有没有刚加入的路径</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span> </span><br></pre></td></tr></table></figure></li>
 <li>假设应用名称 TestApp，在Qt Creator 中 Release 模式运行一次</li>
 <li>找到 Release 路径，拷贝 TestApp 到同名文件夹</li>
-<li>移动到同名文件夹打开终端<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">macdeployqt TestApp.app -dmg<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>移动到同名文件夹打开终端<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">macdeployqt TestApp.app -dmg</span><br></pre></td></tr></table></figure></li>
 <li>将打包好的 dmg 文件发给别人吧</li>
 </ol>
 <h3 id="静态文件-1"><a href="#静态文件-1" class="headerlink" title="静态文件"></a>静态文件</h3><p>macOS 下静态文件，需要在运行 release 后，右键 app 文件显示包内容，然后放进 Contents/MacOs 里。</p>
@@ -321,29 +280,8 @@ libGLESv2.dll <span class="token comment"># OpenGL</span>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
 <li>安装包 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/qt/archive/qt/5.14/5.14.2/qt-opensource-linux-x64-5.14.2.run">qt-opensource-linux-x64-5.14.2.run</a>，如果不能拖拽需要通过 **虚拟机-安装 VMware Tools **来安装相关工具。</li>
 <li>然后双击安装，选择组件时记得选择 Qt5.14.2/Desktop gcc 64-bit</li>
-<li>【可选】更换 Ubuntu 的apt 镜像源为 <a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11ZMu5Np">阿里云ubuntu 镜像</a> ，具体更换步骤点进去查看，注意系统版本。下面方便使用复制了 18.04 的源。<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">vim</span> /etc/apt/sources.list
-
-<span class="token comment"># 将这个文件内容替换为以下内容</span>
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>在终端中安装环境包<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> update
-<span class="token function">sudo</span> <span class="token function">apt-get</span> upgrade
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> build-essential
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> libqt4-dev
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>【可选】更换 Ubuntu 的apt 镜像源为 <a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11ZMu5Np">阿里云ubuntu 镜像</a> ，具体更换步骤点进去查看，注意系统版本。下面方便使用复制了 18.04 的源。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将这个文件内容替换为以下内容</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>在终端中安装环境包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install libqt4-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li>创建一个项目试试看吧</li>
 </ol>
 <h3 id="打包-linuxdeployqt"><a href="#打包-linuxdeployqt" class="headerlink" title="打包 linuxdeployqt"></a>打包 linuxdeployqt</h3><ol>
@@ -352,29 +290,12 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted unive
 <li><p>配置 linuxdeployqt 命令</p>
 </li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 重命名</span>
-<span class="token function">mv</span> linuxdeployqt-continuous-x86_64.AppImage linuxdeployqt
-
-<span class="token comment"># 移动到用户的 bin 目录，就可以全局调用了</span>
-<span class="token function">sudo</span> <span class="token function">mv</span> linuxdeployqt /usr/local/bin
-
-<span class="token comment"># 测试一下可用性</span>
-linuxdeployqt --version<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 重命名</span></span><br><span class="line"><span class="built_in">mv</span> linuxdeployqt-continuous-x86_64.AppImage linuxdeployqt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动到用户的 bin 目录，就可以全局调用了</span></span><br><span class="line">sudo <span class="built_in">mv</span> linuxdeployqt /usr/local/bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试一下可用性</span></span><br><span class="line">linuxdeployqt --version</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>配置Qt 环境变量</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将下面的[gcc 目录]替换为你得 Qt 安装目录下的 gcc 路径</span>
-
-<span class="token comment"># 使用 sudo 打开 ~/.bashrc 并在末尾插入以下内容</span>
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">QT_BIN_PATH</span><span class="token operator">=</span><span class="token punctuation">[</span>gcc 目录<span class="token punctuation">]</span>/bin
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">QT_LIB_PATH</span><span class="token operator">=</span><span class="token punctuation">[</span>gcc 目录<span class="token punctuation">]</span>/lib
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">QT_PLUGINS_PATH</span><span class="token operator">=</span><span class="token punctuation">[</span>gcc 目录<span class="token punctuation">]</span>/plugins
-<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token variable">$QT_BIN_PATH</span><span class="token builtin class-name">:</span><span class="token variable">$QT_LIB_PATH</span><span class="token builtin class-name">:</span><span class="token variable">$QT_PLUGINS_PATH</span><span class="token builtin class-name">:</span><span class="token environment constant">$PATH</span>
-
-<span class="token comment"># 使配置生效并验证可用性，如果输入的 $PATH 有你刚刚的路径则成功</span>
-<span class="token builtin class-name">source</span> ~/.bashrc
-<span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将下面的[gcc 目录]替换为你得 Qt 安装目录下的 gcc 路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 sudo 打开 ~/.bashrc 并在末尾插入以下内容</span></span><br><span class="line"><span class="built_in">export</span> QT_BIN_PATH=[gcc 目录]/bin</span><br><span class="line"><span class="built_in">export</span> QT_LIB_PATH=[gcc 目录]/lib</span><br><span class="line"><span class="built_in">export</span> QT_PLUGINS_PATH=[gcc 目录]/plugins</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QT_BIN_PATH</span>:<span class="variable">$QT_LIB_PATH</span>:<span class="variable">$QT_PLUGINS_PATH</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使配置生效并验证可用性，如果输入的 $PATH 有你刚刚的路径则成功</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li><p>生成 Release 包，假设应用为 TestApp</p>
@@ -386,33 +307,15 @@ linuxdeployqt --version<span aria-hidden="true" class="line-numbers-rows"><span>
 <li><p>在 Release 中找到TestApp 并将它拷贝到一个新建的TestApp文同名件夹中</p>
 </li>
 <li><p>在该文件夹中创建一个 default.desktop 文件夹和你要作为图标的图片，使用任意编辑器打开 default.desktop 写入下面内容，见下方</p>
-<pre class="line-numbers language-none"><code class="language-none">[Desktop Entry]
-Type&#x3D;Application
-Name&#x3D;[app 打包后名称]
-Exec&#x3D;AppRun %F
-Icon&#x3D;图标名称
-Comment&#x3D;一些描述
-Categories&#x3D;Utility;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=[app 打包后名称]</span><br><span class="line">Exec=AppRun %F</span><br><span class="line">Icon=图标名称</span><br><span class="line">Comment=一些描述</span><br><span class="line">Categories=Utility;</span><br></pre></td></tr></table></figure></li>
 <li><p>【可选】添加 <strong>libqgtk2 &amp; libqgtk2style</strong> ，避免一些打包错误</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># if Error message</span>
-WARNING: Plugin <span class="token string">"/usr/lib/x86_64-linux-gnu/qt4/plugins/platformthemes/libqgtk2.so"</span> not found, skipping
-WARNING: Plugin <span class="token string">"/usr/lib/x86_64-linux-gnu/qt4/plugins/styles/libqgtk2style.so"</span> not found, skipping
-
-<span class="token comment"># Fix 如果没有安装 git 请先执行 sudo apt-get install git 来安装</span>
-<span class="token function">apt-get</span> update
-<span class="token function">apt-get</span> -y <span class="token function">install</span> libgtk2.0-dev
-<span class="token function">git</span> clone http://code.qt.io/qt/qtstyleplugins.git
-<span class="token builtin class-name">cd</span> qtstyleplugins
-qmake
-<span class="token function">make</span> -j<span class="token variable"><span class="token variable">$(</span>nproc<span class="token variable">)</span></span>
-<span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
-<span class="token builtin class-name">cd</span> -<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># if Error message</span></span><br><span class="line">WARNING: Plugin <span class="string">&quot;/usr/lib/x86_64-linux-gnu/qt4/plugins/platformthemes/libqgtk2.so&quot;</span> not found, skipping</span><br><span class="line">WARNING: Plugin <span class="string">&quot;/usr/lib/x86_64-linux-gnu/qt4/plugins/styles/libqgtk2style.so&quot;</span> not found, skipping</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fix 如果没有安装 git 请先执行 sudo apt-get install git 来安装</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get -y install libgtk2.0-dev</span><br><span class="line">git <span class="built_in">clone</span> http://code.qt.io/qt/qtstyleplugins.git</span><br><span class="line"><span class="built_in">cd</span> qtstyleplugins</span><br><span class="line">qmake</span><br><span class="line">make -j$(<span class="built_in">nproc</span>)</span><br><span class="line">sudo make install</span><br><span class="line"><span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure></li>
 <li><p>打开终端运行打包 ，这样我们得到打包后的 .AppImage 文件了，将它发送给其他人使用吧</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">linuxdeployqt TestApp -appimage<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linuxdeployqt TestApp -appimage</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="打包-Qt-Installer-Framework"><a href="#打包-Qt-Installer-Framework" class="headerlink" title="打包 Qt Installer Framework"></a>打包 Qt Installer Framework</h3><p>详情请看 <a target="_blank" rel="noopener" href="https://medium.com/geekculture/how-to-deploy-your-qt-cross-platform-applications-to-linux-operating-system-with-qt-installer-ac28258bc370">How to Deploy Your Qt Cross-Platform Applications to Linux Operating System With the Qt Installer Framework - medium</a></p>
 <h3 id="静态文件-2"><a href="#静态文件-2" class="headerlink" title="静态文件"></a>静态文件</h3><p>linux 下静态文件，就不能打包成 AppImage，而是要将相关库文件复制过来，如果是使用 linuxdeployqt 进行打包，只需要修改打包命令的参数。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">linuxdeployqt TestApp -always-overwrite<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linuxdeployqt TestApp -always-overwrite</span><br></pre></td></tr></table></figure>
 
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/qt/">清华大学开源镜像站</a></li>
@@ -434,7 +337,7 @@ qmake
 
     <footer class="post-footer">
           <div class="reward-container">
-  <div>请我喝咖啡!</div>
+  <div>请我一杯咖啡吧！</div>
   <button>
     赞赏
   </button>
@@ -488,7 +391,7 @@ qmake
 
 <div class="copyright">
   &copy; 2021 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -501,11 +404,21 @@ qmake
   </footer>
 
   
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
   <script src="https://cdn.bootcdn.net/ajax/libs/animejs/3.2.1/anime.js"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
 
   
-
 
 
 

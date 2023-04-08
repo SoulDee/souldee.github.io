@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>黑白世界</title>
+  <icon>https://souldee.com/icon.png</icon>
+  <subtitle>Code、Design、DIY</subtitle>
+  <link href="https://souldee.com/rss2.xml" rel="self"/>
+  
+  <link href="https://souldee.com/"/>
+  <updated>2023-04-08T18:52:19.214Z</updated>
+  <id>https://souldee.com/</id>
+  
+  <author>
+    <name>SoulDee</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何下载美区 App Store 的应用</title>
+    <link href="https://souldee.com/blog/how-install-app-of-us/"/>
+    <id>https://souldee.com/blog/how-install-app-of-us/</id>
+    <published>2023-04-05T09:48:00.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;简单折腾一下 iPhone 的科学上网方式，以下仅记录期间会遇到的麻烦的点，对于在哪个网站注册 App Store ID 这种问题不过多描述。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="blog" scheme="https://souldee.com/categories/blog/"/>
+    
+    
+    <category term="App Store" scheme="https://souldee.com/tags/App-Store/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows Terminal 配置</title>
+    <link href="https://souldee.com/code/tools/windows-terminal-config/"/>
+    <id>https://souldee.com/code/tools/windows-terminal-config/</id>
+    <published>2023-03-31T04:07:08.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;早在 Windows Terminal 刚出来没多久有简单试用了一下，但是因为&lt;del&gt;懒惰&lt;/del&gt;没空折腾，然后在前几天，本来我只是在从 npm 迁移到 pnpm 之后，因为觉得 pnpm 太长并且都是右手感觉手难受，于是设置一下 alias，但是不知道为什么始终只在 Windows Terminal 生效，而在 VSCode 里面的终端不生效（原因在下面），于是就顺手折腾了一下，顺便记录一些遇到的问题。（为什么别人安装那么顺利而我按照他们顺序就是有报错啊啊啊啊啊啊！！！）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="code" scheme="https://souldee.com/categories/code/"/>
+    
+    <category term="tools" scheme="https://souldee.com/categories/code/tools/"/>
+    
+    
+    <category term="Theme" scheme="https://souldee.com/tags/Theme/"/>
+    
+    <category term="Font" scheme="https://souldee.com/tags/Font/"/>
+    
+    <category term="Windows Terminal" scheme="https://souldee.com/tags/Windows-Terminal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iTerm2 终端配置</title>
+    <link href="https://souldee.com/code/tools/iterm2-config/"/>
+    <id>https://souldee.com/code/tools/iterm2-config/</id>
+    <published>2022-01-01T15:05:56.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="code" scheme="https://souldee.com/categories/code/"/>
+    
+    <category term="tools" scheme="https://souldee.com/categories/code/tools/"/>
+    
+    
+    <category term="Terminal" scheme="https://souldee.com/tags/Terminal/"/>
+    
+    <category term="macOS" scheme="https://souldee.com/tags/macOS/"/>
+    
+    <category term="iTerm2" scheme="https://souldee.com/tags/iTerm2/"/>
+    
+    <category term="Theme" scheme="https://souldee.com/tags/Theme/"/>
+    
+    <category term="Font" scheme="https://souldee.com/tags/Font/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Qt 多平台打包记录</title>
+    <link href="https://souldee.com/code/qt/deploy-with-qt/"/>
+    <id>https://souldee.com/code/qt/deploy-with-qt/</id>
+    <published>2021-12-27T16:10:44.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="code" scheme="https://souldee.com/categories/code/"/>
+    
+    <category term="qt" scheme="https://souldee.com/categories/code/qt/"/>
+    
+    
+    <category term="Qt" scheme="https://souldee.com/tags/Qt/"/>
+    
+    <category term="C++" scheme="https://souldee.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>📓 VMware 下安装 macOS 踩坑</title>
+    <link href="https://souldee.com/code/tools/macos-on-vmware/"/>
+    <id>https://souldee.com/code/tools/macos-on-vmware/</id>
+    <published>2021-12-12T11:21:55.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。&lt;/p&gt;
+&lt;p&gt;有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下在去看参考链接1，特别是如果你也是 AMD 的 CPU 。如果你是 Inter 的 N 卡，可能问题没这么多。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="code" scheme="https://souldee.com/categories/code/"/>
+    
+    <category term="tools" scheme="https://souldee.com/categories/code/tools/"/>
+    
+    
+    <category term="macOS" scheme="https://souldee.com/tags/macOS/"/>
+    
+    <category term="VMware" scheme="https://souldee.com/tags/VMware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Human Resource Machine 01 - 15</title>
+    <link href="https://souldee.com/game/human-resource-machine-01/"/>
+    <id>https://souldee.com/game/human-resource-machine-01/</id>
+    <published>2021-06-17T16:00:01.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;《人力资源机器》是一款模拟编程的游戏，适合用于学习编程的基本思维，该系列包含了这个游戏的个人解答和思路。可直接复制下面内容，进入游戏相应的关卡之后，点击右侧代码编辑栏下方的粘贴即可看到对应的运行代码，然后通过运行来看一下实际的执行顺序。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="game" scheme="https://souldee.com/categories/game/"/>
+    
+    
+    <category term="Programming Game" scheme="https://souldee.com/tags/Programming-Game/"/>
+    
+    <category term="Human Resource Machine" scheme="https://souldee.com/tags/Human-Resource-Machine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://souldee.com/blog/hello-world/"/>
+    <id>https://souldee.com/blog/hello-world/</id>
+    <published>2021-06-17T16:00:00.000Z</published>
+    <updated>2023-04-08T18:52:19.214Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我也不知道为什么又又又重新建了博客。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="blog" scheme="https://souldee.com/categories/blog/"/>
+    
+    
+  </entry>
+  
+</feed>

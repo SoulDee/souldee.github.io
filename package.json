@@ -14,23 +14,20 @@
     "deploy:all": "git add . && git ci -m'update doc' && git push"
   },
   "hexo": {
-    "version": "6.0.0"
+    "version": "6.3.0"
   },
   "dependencies": {
-    "animejs": "^3.2.1",
-    "hexo": "^6.0.0",
+    "hexo": "^6.3.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
+    "hexo-generator-searchdb": "^1.4.1",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^4.0.0",
-    "hexo-renderer-stylus": "^2.0.0",
+    "hexo-renderer-marked": "^4.1.0",
+    "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^0.0.3",
-    "hexo-theme-next": "^8.5.0",
-    "js-yaml": "^4.1.0",
-    "prism-themes": "^1.9.0"
+    "hexo-theme-next": "^8.15.1"
   },
   "yuqueConfig": {
     "postPath": "source/_posts/repo",
@@ -46,6 +43,6 @@
     "lastGeneratePath": "lastGeneratePath.log"
   },
   "devDependencies": {
-    "yuque-hexo": "^1.8.0"
+    "yuque-hexo": "^1.9.5"
   }
 }

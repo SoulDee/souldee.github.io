@@ -7,3 +7,4 @@ public/
 .deploy*/
 yuque.json
 pnpm-lock.yaml
+_config.db.yml

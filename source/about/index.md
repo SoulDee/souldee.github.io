@@ -1,6 +1,7 @@
 ---
 title: About me
 type: "about"
+comments: false
 ---
 
 本职工作是一名码农，兴趣很多，喜欢瞎折腾，对这个世界的各种事物充满好奇。

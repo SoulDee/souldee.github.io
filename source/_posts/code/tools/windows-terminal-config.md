@@ -1,9 +1,6 @@
 ---
 title: Windows Terminal 配置
 date: 2023-03-31 12:07:08
-categories: 
-    - Programming
-    - Environment
 tags: 
     - Windows Terminal
     - Theme

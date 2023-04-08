@@ -1,7 +1,6 @@
 ---
 title: 如何下载美区 App Store 的应用
 date: 2023-04-05 17:48:00
-categories: 随笔
 tags:
   - App Store
 ---

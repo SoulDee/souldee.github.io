@@ -1,9 +1,6 @@
 ---
 title: iTerm2 终端配置
 date: 2022-01-01 23:05:56
-categories: 
-    - Programming
-    - Environment
 tags: 
     - Terminal
     - macOS

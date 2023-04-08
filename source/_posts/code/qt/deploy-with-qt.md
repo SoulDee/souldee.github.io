@@ -1,9 +1,6 @@
 ---
 title: Qt 多平台打包记录
 date: 2021-12-28 00:10:44
-categories: 
-    - Programming
-    - Environment
 tags: 
     - Qt
     - C++

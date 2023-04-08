@@ -109,3 +109,26 @@ search:
   field: post
   content: true
   format: html
+
+
+# ============================= 第三方插件
+
+# 根据博客路径自动生成分类 https://www.npmjs.com/package/hexo-directory-category
+auto_dir_categorize:
+	enable: true 
+	force: true # 强制覆盖
+
+
+# RSS 订阅 https://www.npmjs.com/package/hexo-generator-feed
+feed:
+  type: rss
+  path: rss2.xml
+  limit: 10
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:

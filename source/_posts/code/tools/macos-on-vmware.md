@@ -1,9 +1,10 @@
 ---
-title: 📓 VMware 下安装 macOS 踩坑
+title: "\U0001F4D3 VMware 下安装 macOS 踩坑"
+tags:
+  - VMware
+  - macOS
+abbrlink: b157a39c
 date: 2021-12-12 19:21:55
-tags: 
-    - VMware
-    - macOS
 ---
 
 更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。

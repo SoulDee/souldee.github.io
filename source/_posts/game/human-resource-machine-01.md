@@ -1,10 +1,10 @@
 ---
 title: Human Resource Machine 01 - 15
-date: 2021-6-18 00:00:01
-tags: 
-    - Programming Game
-    - Human Resource Machine
-
+tags:
+  - Programming Game
+  - Human Resource Machine
+abbrlink: fbb14a4d
+date: 2021-06-18 00:00:01
 ---
 
 >《人力资源机器》是一款模拟编程的游戏，适合用于学习编程的基本思维，该系列包含了这个游戏的个人解答和思路。可直接复制下面内容，进入游戏相应的关卡之后，点击右侧代码编辑栏下方的粘贴即可看到对应的运行代码，然后通过运行来看一下实际的执行顺序。

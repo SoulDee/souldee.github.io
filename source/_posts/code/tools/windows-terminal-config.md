@@ -1,10 +1,11 @@
 ---
 title: Windows Terminal 配置
+tags:
+  - Windows Terminal
+  - Theme
+  - Font
+abbrlink: '11e1167'
 date: 2023-03-31 12:07:08
-tags: 
-    - Windows Terminal
-    - Theme
-    - Font
 ---
 
 早在 Windows Terminal 刚出来没多久有简单试用了一下，但是因为~~懒惰~~没空折腾，然后在前几天，本来我只是在从 npm 迁移到 pnpm 之后，因为觉得 pnpm 太长并且都是右手感觉手难受，于是设置一下 alias，但是不知道为什么始终只在 Windows Terminal 生效，而在 VSCode 里面的终端不生效（原因在下面），于是就顺手折腾了一下，顺便记录一些遇到的问题。（为什么别人安装那么顺利而我按照他们顺序就是有报错啊啊啊啊啊啊！！！）

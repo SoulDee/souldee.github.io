@@ -1,12 +1,13 @@
 ---
 title: iTerm2 终端配置
+tags:
+  - Terminal
+  - macOS
+  - iTerm2
+  - Theme
+  - Font
+abbrlink: 5e0a8950
 date: 2022-01-01 23:05:56
-tags: 
-    - Terminal
-    - macOS
-    - iTerm2
-    - Theme
-    - Font
 ---
 
 最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。

@@ -1,8 +1,9 @@
 ---
 title: 如何下载美区 App Store 的应用
-date: 2023-04-05 17:48:00
 tags:
   - App Store
+abbrlink: '97852533'
+date: 2023-04-05 17:48:00
 ---
 
 简单折腾一下 iPhone 的科学上网方式，以下仅记录期间会遇到的麻烦的点，对于在哪个网站注册 App Store ID 这种问题不过多描述。

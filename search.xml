@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/blog/hello-world/</url>
+    <url>/posts/4a17b156/</url>
     <content><![CDATA[<p>我也不知道为什么又又又重新建了博客。</p>
 ]]></content>
       <categories>
@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <title>如何下载美区 App Store 的应用</title>
-    <url>/blog/how-install-app-of-us/</url>
+    <url>/posts/97852533/</url>
     <content><![CDATA[<p>简单折腾一下 iPhone 的科学上网方式，以下仅记录期间会遇到的麻烦的点，对于在哪个网站注册 App Store ID 这种问题不过多描述。</p>
 <span id="more"></span>
 
@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <title>Human Resource Machine 01 - 15</title>
-    <url>/game/human-resource-machine-01/</url>
+    <url>/posts/fbb14a4d/</url>
     <content><![CDATA[<blockquote>
 <p>《人力资源机器》是一款模拟编程的游戏，适合用于学习编程的基本思维，该系列包含了这个游戏的个人解答和思路。可直接复制下面内容，进入游戏相应的关卡之后，点击右侧代码编辑栏下方的粘贴即可看到对应的运行代码，然后通过运行来看一下实际的执行顺序。</p>
 </blockquote>
@@ -163,7 +163,7 @@
   </entry>
   <entry>
     <title>Qt 多平台打包记录</title>
-    <url>/code/qt/deploy-with-qt/</url>
+    <url>/posts/1d718831/</url>
     <content><![CDATA[<p>本文记录在 Qt 跨平台应用开发完成之后的打包步骤，每个平台都列出了 Qt 版本和系统环境，因为这些都会对打包过程有一定的影响，例如 macOS 默认下载 xcode 的 SDK 版本过新，而 Qt 5.15.2 支持不了等，会在下面写出为什么选择这些版本，希望能给你带来帮助。</p>
 <span id="more"></span>
 
@@ -271,7 +271,7 @@
   </entry>
   <entry>
     <title>iTerm2 终端配置</title>
-    <url>/code/tools/iterm2-config/</url>
+    <url>/posts/5e0a8950/</url>
     <content><![CDATA[<p>最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。</p>
 <span id="more"></span>
 
@@ -327,7 +327,7 @@
   </entry>
   <entry>
     <title>📓 VMware 下安装 macOS 踩坑</title>
-    <url>/code/tools/macos-on-vmware/</url>
+    <url>/posts/b157a39c/</url>
     <content><![CDATA[<p>更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。</p>
 <p>有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下在去看参考链接1，特别是如果你也是 AMD 的 CPU 。如果你是 Inter 的 N 卡，可能问题没这么多。</p>
 <span id="more"></span>
@@ -399,7 +399,7 @@
   </entry>
   <entry>
     <title>Windows Terminal 配置</title>
-    <url>/code/tools/windows-terminal-config/</url>
+    <url>/posts/11e1167/</url>
     <content><![CDATA[<p>早在 Windows Terminal 刚出来没多久有简单试用了一下，但是因为<del>懒惰</del>没空折腾，然后在前几天，本来我只是在从 npm 迁移到 pnpm 之后，因为觉得 pnpm 太长并且都是右手感觉手难受，于是设置一下 alias，但是不知道为什么始终只在 Windows Terminal 生效，而在 VSCode 里面的终端不生效（原因在下面），于是就顺手折腾了一下，顺便记录一些遇到的问题。（为什么别人安装那么顺利而我按照他们顺序就是有报错啊啊啊啊啊啊！！！）</p>
 <span id="more"></span>
 

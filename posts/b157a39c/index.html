@@ -19,34 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"souldee.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。">
+    <meta name="description" content="更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。 有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iTerm2 终端配置">
-<meta property="og:url" content="https://souldee.com/code/tools/iterm2-config/">
+<meta property="og:title" content="📓 VMware 下安装 macOS 踩坑">
+<meta property="og:url" content="https://souldee.com/posts/b157a39c/">
 <meta property="og:site_name" content="黑白世界">
-<meta property="og:description" content="最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。">
+<meta property="og:description" content="更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。 有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://souldee.com/images/iTerm2-config.png">
-<meta property="article:published_time" content="2022-01-01T15:05:56.000Z">
-<meta property="article:modified_time" content="2023-04-08T18:52:19.214Z">
+<meta property="article:published_time" content="2021-12-12T11:21:55.000Z">
+<meta property="article:modified_time" content="2023-04-09T07:49:28.511Z">
 <meta property="article:author" content="SoulDee">
-<meta property="article:tag" content="Terminal">
 <meta property="article:tag" content="macOS">
-<meta property="article:tag" content="iTerm2">
-<meta property="article:tag" content="Theme">
-<meta property="article:tag" content="Font">
+<meta property="article:tag" content="VMware">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://souldee.com/images/iTerm2-config.png">
 
 
-<link rel="canonical" href="https://souldee.com/code/tools/iterm2-config/">
+<link rel="canonical" href="https://souldee.com/posts/b157a39c/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://souldee.com/code/tools/iterm2-config/","path":"code/tools/iterm2-config/","title":"iTerm2 终端配置"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://souldee.com/posts/b157a39c/","path":"posts/b157a39c/","title":"📓 VMware 下安装 macOS 踩坑"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>iTerm2 终端配置 | 黑白世界</title>
+<title>📓 VMware 下安装 macOS 踩坑 | 黑白世界</title>
   
 
 
@@ -134,7 +129,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -147,7 +142,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminal"><span class="nav-number">1.</span> <span class="nav-text">Terminal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theme"><span class="nav-number">2.</span> <span class="nav-text">Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Plugins"><span class="nav-number">3.</span> <span class="nav-text">Plugins</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Font"><span class="nav-number">4.</span> <span class="nav-text">Font</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Window"><span class="nav-number">5.</span> <span class="nav-text">Window</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Colors"><span class="nav-number">6.</span> <span class="nav-text">Colors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">7.</span> <span class="nav-text">Reference</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,7 +202,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://souldee.com/code/tools/iterm2-config/">
+    <link itemprop="mainEntityOfPage" href="https://souldee.com/posts/b157a39c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -221,12 +215,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="iTerm2 终端配置 | 黑白世界">
+      <meta itemprop="name" content="📓 VMware 下安装 macOS 踩坑 | 黑白世界">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          iTerm2 终端配置
+          📓 VMware 下安装 macOS 踩坑
         </h1>
 
         <div class="post-meta-container">
@@ -237,14 +231,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-01-01 23:05:56" itemprop="dateCreated datePublished" datetime="2022-01-01T23:05:56+08:00">2022-01-01</time>
+      <time title="创建时间：2021-12-12 19:21:55" itemprop="dateCreated datePublished" datetime="2021-12-12T19:21:55+08:00">2021-12-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-09 02:52:19" itemprop="dateModified" datetime="2023-04-09T02:52:19+08:00">2023-04-09</time>
+      <time title="修改时间：2023-04-09 15:49:28" itemprop="dateModified" datetime="2023-04-09T15:49:28+08:00">2023-04-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -270,45 +264,64 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。</p>
+        <p>更新：以下内容有待验证，例如后期验证过 VMware 16.2 也是可以用于安装 macOS 的。</p>
+<p>有时候我们需要使用 macOS 的一些东西，但是又不想专门买一个笔记本电脑，例如使用 Qt 开发跨平台的桌面应用，我们只需要使用 macOS 来编译对应版本的运行包而已。 这时候虚拟机就派上用场了。关于安装的步骤请直接看底部参考链接1，这里主要记录安装过程遇到的一些问题和解决方案。个人建议先浏览一下在去看参考链接1，特别是如果你也是 AMD 的 CPU 。如果你是 Inter 的 N 卡，可能问题没这么多。</p>
 <span id="more"></span>
 
-<p>放一张效果图 <img data-src="/images/iTerm2-config.png" alt="iTerm2 config"></p>
-<h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><p><em><a target="_blank" rel="noopener" href="https://iterm2.com/">iTerm2</a></em> 下载打开即可安装</p>
-<p><em><a target="_blank" rel="noopener" href="https://ohmyz.sh/">Oh My ZSH!</a></em> 是 <em>zsh</em> 的配置管理工具，使用命令行安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># wget , install wget before ohmyzsh if you using wget</span></span><br><span class="line">brew install wget</span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p>首先配置一个 zsh 的渲染主题（不是文字颜色主题），从 <em><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">Theme wiki</a></em> 中选择一个你喜欢的主题的名称，这里选择 <em>agnoster</em> ，然后配置主题。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. Open config file</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. find and change ZSH_THEME field.</span></span><br><span class="line">ZSH_THEME=<span class="string">&quot;agnoster&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>接着安装一些功能插件，从 <em><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">Plugins wiki</a></em> 找到需要的插件下载，或者搜一下 <em><a target="_blank" rel="noopener" href="https://github.com/search?q=zsh">zsh - Github</a></em> 看一下，下面用两个插件示范。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. Download plugins</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Open config file</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Find and change Plugins field.</span></span><br><span class="line">plugins=(zsh-autosuggestions zsh-syntax-highlighting)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. Add starter in the end</span></span><br><span class="line"><span class="built_in">source</span> ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line"><span class="built_in">source</span> ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 没有这个会导致原始环境变量失效</span></span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>经过上面配置后再次打开 iTerm2 后就会有自动补全和代码高亮的效果。</p>
-<h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><p>字体在显示效果中也很重要。安装 <em><a target="_blank" rel="noopener" href="https://github.com/powerline/fonts">Powerline - Github</a></em> </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git --depth 1</span><br><span class="line"><span class="built_in">cd</span> fonts</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
-
-<p>打开 <em>iTerm2</em> ，进入到文字设置标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Text</em> 找到 <em>font</em> 选项，选择名称后缀为 <em>for Powerline</em> 的任意字体。</p>
-<p>将 <em>Text Rendering</em> 选项的 <em>Use build-in Powerline glyphs</em> 勾选上，不然会出现乱码。</p>
-<h2 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h2><p>适当的透明度和失焦能够带来很好的观感。进入到窗口标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Window</em>。</p>
-<p>通过对属性 <em>Transparency</em> 的调整来修改窗口透明度，不需要太高，个人设置 20 左右。</p>
-<p>通过对属性 <em>Blur</em> 的调整修改失焦，类似玻璃效果，个人设置 16 左右。</p>
-<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>最后我们还要设置一下各种文本的显示颜色，进入颜色标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Colors</em> 。</p>
-<p>右下角 <em>Color Presets</em> 选择任意喜欢的主题，然后基于这个主题进行调整，<em>Basic Colors</em> 主要是基本颜色，右边的 <em>ANSI Colors</em> 则是各种状态的颜色，例如链接，命令，文件，补全文本等等，可以直接修改，iTerm2 会实时变更的。</p>
-<p>如果你只想要更多的配色，而不想要自己慢慢调整，那么可以看看 <em><a target="_blank" rel="noopener" href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2-Color-Schemes</a></em> ，里面的主题不仅仅能用在 iTerm2 中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  Download iT er m-Color-Schemes</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth 1</span><br></pre></td></tr></table></figure>
-
-<p>在项目中找到想要的主题的名字，例如 <em>3024 Day</em></p>
-<p>通过 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Colors</em> 中右下角 <em>Color Presets&gt;Import</em> ,然后选择 <em>Term2-Color-Schemes&gt;schemes&gt;3024 Day.itermcolors</em> 文件。</p>
-<p>或者也可以按住 <em>shift/command</em> 进行多选打开多个主题。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://iterm2.com/">iTerm2</a></li>
-<li><a target="_blank" rel="noopener" href="https://ohmyz.sh/">Oh My ZSH!</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki">onmyzsh wiki - Github</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions - Github</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting.git">zsh-syntax-highlighting - Github</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/powerline/fonts">Powerline - Github</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2-Color-Schemes - Github</a></li>
+<h3 id="⚙-相关硬件参数"><a href="#⚙-相关硬件参数" class="headerlink" title="⚙ 相关硬件参数"></a>⚙ 相关硬件参数</h3><p>CPU：AMD Ryzen 5 3600</p>
+<h3 id="✅-VMware-workstation-pro-的选择和安装"><a href="#✅-VMware-workstation-pro-的选择和安装" class="headerlink" title="✅ VMware workstation pro 的选择和安装"></a>✅ VMware workstation pro 的选择和安装</h3><p>选择 15.0 或者 15.1 版本，序列号随便搜一下安装教程一般最下面都有，以下是原因：</p>
+<ul>
+<li>16 因为目前找到的用于解锁安装 macOS 系统的 Unlocker 最多支持到 15</li>
+<li>15.5 如果使用的是 AMD 的 CPU 可能是不行的，会导致一个 <strong>未能启动虚拟机</strong> 的问题</li>
+<li>15.1 未实测，但是根据一些搜索结果来看 AMD 也可以</li>
+<li>15.0 实测可行</li>
+</ul>
+<h3 id="✅-Unlocker-的选择和使用"><a href="#✅-Unlocker-的选择和使用" class="headerlink" title="✅ Unlocker 的选择和使用"></a>✅ Unlocker 的选择和使用</h3><p>选择 paolo-projects/**<a target="_blank" rel="noopener" href="https://github.com/paolo-projects/unlocker">unlocker</a>**，可以下载 <a target="_blank" rel="noopener" href="https://github.com/paolo-projects/unlocker/releases/tag/3.0.3">Release</a> 的打包版本或者自行安装 Python 2.7 的环境来直接运行。</p>
+<ul>
+<li>theJaxon/<strong><a target="_blank" rel="noopener" href="https://github.com/theJaxon/unlocker">unlocker</a></strong> 是早期版本，作者很久没有更新了，亲测失效，比较坑的是你在 Github 搜 unlocker 找到的第一个就是这个</li>
+<li>paolo-projects/<strong><a target="_blank" rel="noopener" href="https://github.com/paolo-projects/unlocker">unlocker</a></strong> 是上面那个的 fork 分支，亲测可用，但是 Github 你搜索 unlocker 的时候前面几页都没看到，倒是能看到同作者的另一个基于 C++ 写的 auto-unlocker，或许也可以？</li>
+</ul>
+<p>下载之后以管理员权限运行目录下的 win_install.cmd 并等待执行完毕即可</p>
+<h3 id="✅-macOS-的镜像"><a href="#✅-macOS-的镜像" class="headerlink" title="✅ macOS 的镜像"></a>✅ macOS 的镜像</h3><p>如果你每次开启虚拟机后并没有进入macOS的加载画面，而是进入到蓝屏的 boot manager 的话，那么很可能是因为你镜像有问题，可以找一些别人已经试过的镜像。比如参考链接1中的两个镜像。</p>
+<ul>
+<li>dmg 是原版系统，虚拟机用不了，如果要使用的话需要一个大于 8g 的 U 盘制作启动盘，不推荐这个方法。个人使用 UltraISO 去制作启动盘，出现了一个新的问题，制作后的启动盘不能被虚拟机识别，可能虚拟机版本有关，测试用的 15.5，另外写入镜像后剩余的磁盘是未分配状态，所以你插入启动盘电脑能找到，但是在 <strong>个人电脑</strong> 是看不到的，需要到磁盘管理手动分配空间。</li>
+<li>ISO/CDR 系统镜像，虚拟机可用，如果有 dmg 又不想下载别人发的镜像也可以尝试自己将 dmg 转换为 ISO/CDR 格式，参考链接2，除此之外，cdr 格式在WMware 中会说可能不可用，但是其实是可以的，直接改一些后缀为 iso 即可。</li>
+</ul>
+<h3 id="✅-客户机操作系统已禁用-CPU，请关闭或重置虚拟机"><a href="#✅-客户机操作系统已禁用-CPU，请关闭或重置虚拟机" class="headerlink" title="✅ 客户机操作系统已禁用 CPU，请关闭或重置虚拟机"></a>✅ 客户机操作系统已禁用 CPU，请关闭或重置虚拟机</h3><p>点击你的虚拟机，然后右键选择打开虚拟机目录，使用任意文本编辑器打开 <strong>【你的虚拟机名称】.vmx</strong> 这样的一个文件，添加以下内容保存并重新打开虚拟机</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">smc.version = &quot;0&quot;</span><br><span class="line">cpuid.0.eax = &quot;0000:0000:0000:0000:0000:0000:0000:1011&quot;</span><br><span class="line">cpuid.0.ebx = &quot;0111:0101:0110:1110:0110:0101:0100:0111&quot;</span><br><span class="line">cpuid.0.ecx = &quot;0110:1100:0110:0101:0111:0100:0110:1110&quot;</span><br><span class="line">cpuid.0.edx = &quot;0100:1001:0110:0101:0110:1110:0110:1001&quot;</span><br><span class="line">cpuid.1.eax = &quot;0000:0000:0000:0001:0000:0110:0111:0001&quot;</span><br><span class="line">cpuid.1.ebx = &quot;0000:0010:0000:0001:0000:1000:0000:0000&quot;</span><br><span class="line">cpuid.1.ecx = &quot;1000:0010:1001:1000:0010:0010:0000:0011&quot;</span><br><span class="line">cpuid.1.edx = &quot;0000:1111:1010:1011:1111:1011:1111:1111&quot;</span><br><span class="line">featureCompat.enable = &quot;FALSE&quot;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="✅-这个虚拟机需要avx2，但是没有avx"><a href="#✅-这个虚拟机需要avx2，但是没有avx" class="headerlink" title="✅ 这个虚拟机需要avx2，但是没有avx"></a>✅ <strong>这个虚拟机需要avx2，但是没有avx</strong></h3><p>打开 vmx 文件，然后找到 virtualHW.version = “xx” ，将 xx 修改为 10，这个值代表的是兼容到哪个版本的 WVware。</p>
+<h3 id="✅-启动后鼠标键盘无法移动"><a href="#✅-启动后鼠标键盘无法移动" class="headerlink" title="✅ 启动后鼠标键盘无法移动"></a>✅ 启动后鼠标键盘无法移动</h3><p>打开 vmx 文件，添加以下内容并修改虚拟机硬件配置中的 USB 配置器兼容性为 2.0，同时勾选 <strong>显示所有 USB 设备</strong></p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keyboard.vusb.enable = &quot;TRUE&quot;</span><br><span class="line">mouse.vusb.enable = &quot;TRUE&quot;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="✅-无法安装-VMware-Tool"><a href="#✅-无法安装-VMware-Tool" class="headerlink" title="✅ 无法安装 VMware Tool"></a>✅ 无法安装 VMware Tool</h3><p>需要使用 darwin.iso 来安装，早期版本的 VMware 是自带的，后面一些版本没有，只能自己下载了，可以看一下参考链接 5，里面包含了下载链接。 </p>
+<ol>
+<li><p>安装前先将桌面右上角的磁盘退出，右键选中推出”Install macOS xxxx“。</p>
+</li>
+<li><p>下载后修改虚拟机硬件配置 CD/DVD 镜像为 darwin.iso 的路径，并勾选设备状态为已连接就可以正常安装了。</p>
+</li>
+<li><p>安装结束之后重启，然后从主机随便拖拽一个文件到虚拟机，这时候会让你进行 <strong>安全性与隐私</strong> 偏好设置，设置一下就行。</p>
+</li>
+</ol>
+<h3 id="✅-无法全屏"><a href="#✅-无法全屏" class="headerlink" title="✅ 无法全屏"></a>✅ 无法全屏</h3><p>如果是 windows 和 linux ，在安装 VMware Tool 之后通常就自动铺满虚拟机了，而 macOS 麻烦点，并且需要虚拟机全屏才能触发 macOS 全屏。</p>
+<ol>
+<li>首先按照上面步骤安装 VMware Tool</li>
+<li>打开 vmx 文件并添加 bios.forceSetupOnce = “TRUE” 来进入 bios</li>
+<li>在 boot manager 界面中一次选择 Enter setip -&gt; Boot from a file -&gt; Recovery 【一串很长的名字】 -&gt; 【一串序列号】-&gt; boot.efi</li>
+<li>进入到一个和安装时一样的界面，点击上面工具栏的实用工具-&gt;终端，输入 <strong>csrutil disable</strong> 来关闭 macOS 的 SIP 保护服务</li>
+<li>之后输入 reboot 重启，并点击虚拟机上方工具栏的全屏模式，需要注意的是虚拟机退出全屏后 macOS 全屏也会失效。</li>
+</ol>
+<h3 id="📚-参考"><a href="#📚-参考" class="headerlink" title="📚 参考"></a>📚 参考</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/337036027">全网最详细的VMware虚拟机安装MacOS系统教程，没有之一！！！附全部资源 - xuan yang的文章 - 知乎</a> </li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31683775/article/details/120779678">黑苹果 dmg,cdr和iso的区别</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/silentbird520/article/details/96039415">AMD Vmware15 装 MaCOSX 10.14 报错# 客户机操作系统已禁用 CPU，请关闭或重置虚拟机</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sunshine__sun/article/details/114674695">macos虚拟机鼠标不能移动和键盘不能使用</a></li>
+<li><a target="_blank" rel="noopener" href="https://crifan.github.io/popular_virtual_machine_vmware/website/usage_summary/vmware_tools/macos/darwin_iso.html">darwin.iso</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40448001/article/details/116779835?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.highlightwordscore&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.highlightwordscore">虚拟机苹果macOS系统安装VMware Tools教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/cait_/article/details/89505022">详解：MacOS全屏显示，VMware Tools的安装与使用</a></li>
 </ol>
 
     </div>
@@ -337,24 +350,21 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Terminal/" rel="tag"># Terminal</a>
               <a href="/tags/macOS/" rel="tag"># macOS</a>
-              <a href="/tags/iTerm2/" rel="tag"># iTerm2</a>
-              <a href="/tags/Theme/" rel="tag"># Theme</a>
-              <a href="/tags/Font/" rel="tag"># Font</a>
+              <a href="/tags/VMware/" rel="tag"># VMware</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/code/qt/deploy-with-qt/" rel="prev" title="Qt 多平台打包记录">
-                  <i class="fa fa-chevron-left"></i> Qt 多平台打包记录
+                <a href="/posts/fbb14a4d/" rel="prev" title="Human Resource Machine 01 - 15">
+                  <i class="fa fa-chevron-left"></i> Human Resource Machine 01 - 15
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/code/tools/windows-terminal-config/" rel="next" title="Windows Terminal 配置">
-                  Windows Terminal 配置 <i class="fa fa-chevron-right"></i>
+                <a href="/posts/1d718831/" rel="next" title="Qt 多平台打包记录">
+                  Qt 多平台打包记录 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

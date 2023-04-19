@@ -102,6 +102,10 @@ cd fonts
 
 如果你只想要更多的配色，而不想要自己慢慢调整，那么可以看看 *[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)* ，里面的主题不仅仅能用在 iTerm2 中。
 
+如果只想要一个主题并不想下载全部内容，可以在 [iterm2colorschemes](https://iterm2colorschemes.com/) 查看，找到喜欢的主题之后右键保存到本地为 .itermcolors 文件。
+
+如果想要全部一次性下载（通常来说这没有必要），也可以在上述网站右上角下载或者直接 clone 整个仓库。
+
 ```bash
 #  Download iT er m-Color-Schemes
 git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth 1
@@ -112,6 +116,7 @@ git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth 1
 通过 *Profiles>Open Profiles>Edit Profiles>Colors* 中右下角 *Color Presets>Import* ,然后选择 *Term2-Color-Schemes>schemes>3024 Day.itermcolors* 文件。
 
 或者也可以按住 *shift/command* 进行多选打开多个主题。
+
 
 ## Reference
 

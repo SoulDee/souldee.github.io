@@ -134,7 +134,7 @@ Windows Terminal 默认是没有管理员权限，为了解决这个问题可以
 scoop install gsudo
 ```
 
-然后打开 Windows Terminal 设置-添加新配置文件-复制配置文件-下拉选择PowerShell-点击复制。然后将名字修改为 `PowerShell Plus` 或者其他有所区分的名称，然后修改该配置的命令行为：`gsudo.exe pwsh.exe -nologo`。
+然后打开 Windows Terminal 设置-添加新配置文件-复制配置文件-下拉选择PowerShell-点击复制。然后将名字修改为 `PowerShell Plus` 或者其他有所区分的名称，然后修改该配置的命令行为：`gsudo.exe pwsh.exe -nologo`。(-nologo 用于关闭 PowerShell 的更新检查，否则如果有新版本会一直弹出更新提示)
 
 这时候你就能通过下拉菜单的 `PowerShell Plus` 来打开管理员权限的终端，也可以将该配置设为默认终端。此时标签名称为 `Administrator：PowerShell Plus` 表示管理员权限。
 

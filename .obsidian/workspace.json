@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "3e9512b43b62c79c",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d4925885f9b0621",
+        "type": "tabs",
+        "dimension": 82.02099737532808,
+        "children": [
+          {
+            "id": "c05da291af1e742c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/blog/how-install-app-of-us.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            },
+            "group": "9f0a313f02201f57"
+          }
+        ]
+      },
+      {
+        "id": "a187355af399fc98",
+        "type": "tabs",
+        "dimension": 17.979002624671917,
+        "children": [
+          {
+            "id": "e2cdfa6ad152e056",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/blog/how-install-app-of-us.md"
+              }
+            },
+            "group": "9f0a313f02201f57"
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f09fd5580b361d38",
+    "type": "split",
+    "children": [
+      {
+        "id": "881313d8714fb329",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4812a93b93ce9eca",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "689a136e213065e2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 290.5
+  },
+  "right": {
+    "id": "a3e13e86c419dc9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d788009b4937acd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14e685796c522db0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "source/_posts/blog/how-install-app-of-us.md"
+              }
+            }
+          },
+          {
+            "id": "52dd44449cfe274c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "source/_posts/blog/how-install-app-of-us.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
+      "graph:查看关系图谱": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "c05da291af1e742c",
+  "lastOpenFiles": [
+    "source/_posts/blog/hello-world.md",
+    "source/_posts/blog/how-install-app-of-us.md",
+    "README.md",
+    "node_modules/@types/node/README.md",
+    "scaffolds/post.md",
+    "scaffolds/page.md",
+    "scaffolds/draft.md",
+    "Daily/2023-05-11.md",
+    "React/Reference/Hooks.md",
+    "React/Learn/Adding Interactivity.md",
+    "React/Reference/APIs.md",
+    "React/Learn/Managing State.md",
+    "React/Learn/Escape Hatches.md",
+    "React/Learn/Describing the UI.md",
+    "Daily/2023-05-10.md",
+    "Template/Daily.md",
+    "Daily/2023-05-08.md",
+    "Daily",
+    "Template",
+    "Assets"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "bdeb85a7360a6fda",
+    "type": "split",
+    "children": [
+      {
+        "id": "f48dbf9a5c1703a0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "blog/how-install-app-of-us.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a757462d9212ebf6",
+    "type": "split",
+    "children": [
+      {
+        "id": "609ccf90830e2eb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "faa7f1d6dd1b2c81",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "87eaad6d28d273da",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 285
+  },
+  "right": {
+    "id": "6e0a58279b5d22d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "3769002843723a99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba588a7025d20b81",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/how-install-app-of-us.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "f48dbf9a5c1703a0",
+  "lastOpenFiles": [
+    "blog/how-install-app-of-us.md",
+    "blog/hello-world.md",
+    "game/human-resource-machine-01.md"
+  ]
+}

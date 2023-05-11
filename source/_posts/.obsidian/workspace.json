@@ -1,0 +1,132 @@
+{
+  "main": {
+    "id": "bdeb85a7360a6fda",
+    "type": "split",
+    "children": [
+      {
+        "id": "c6937a70f34f043d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7122d86c64392c37",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a757462d9212ebf6",
+    "type": "split",
+    "children": [
+      {
+        "id": "609ccf90830e2eb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "faa7f1d6dd1b2c81",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "87eaad6d28d273da",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9444fca44175af6c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "6e0a58279b5d22d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "3769002843723a99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ba588a7025d20b81",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "code/tools/windows-terminal-config.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "74a8f02be690cb56",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "7122d86c64392c37",
+  "lastOpenFiles": [
+    "未命名",
+    "code/tools/windows-terminal-config.md",
+    "code/tools/macos-on-vmware.md",
+    "code/tools/iterm2-config.md",
+    "code/qt/deploy-with-qt.md",
+    "blog/how-install-app-of-us.md",
+    "blog/hello-world.md",
+    "未命名.canvas",
+    "game/human-resource-machine-01.md"
+  ]
+}

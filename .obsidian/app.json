@@ -1,0 +1,16 @@
+{
+  "showFrontmatter": false,
+  "spellcheck": false,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ],
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "absolute",
+  "attachmentFolderPath": "source/images",
+  "promptDelete": false,
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/"
+  ]
+}

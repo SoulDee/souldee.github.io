@@ -1,0 +1,11 @@
+{
+  "baseFontSize": 14,
+  "theme": "obsidian",
+  "translucency": false,
+  "cssTheme": "Atom",
+  "accentColor": "#417c62",
+  "interfaceFontFamily": "苹方-简",
+  "textFontFamily": "苹方-简",
+  "monospaceFontFamily": "Consolas",
+  "nativeMenus": false
+}

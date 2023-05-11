@@ -1,0 +1,16 @@
+{
+  "defaultViewMode": "source",
+  "legacyEditor": false,
+  "showFrontmatter": false,
+  "foldHeading": false,
+  "foldIndent": false,
+  "showLineNumber": false,
+  "lineWrap": true,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ],
+  "smartIndentList": true,
+  "alwaysUpdateLinks": true,
+  "showInlineTitle": false
+}

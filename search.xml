@@ -10,6 +10,47 @@
       </categories>
   </entry>
   <entry>
+    <title>从一本书开始，选择成为博主</title>
+    <url>/posts/f5ab715/</url>
+    <content><![CDATA[<p>我是一名程序员<br>至少几个月前还没失业的时候是</p>
+<p>/</p>
+<p>说起来我并不讨厌当一个程序员，只是整理想法清单的时候发现我还有那么多想做的事情</p>
+<p>但对于我而言麻烦的恰恰是想做的太多了反而无法选择，于是我再次陷入了迷茫，直到我发现了一本书……</p>
+<span id="more"></span>
+
+<p>/</p>
+<p>📖《如何找到想做的事》</p>
+<p>正如书名所写的，这是一本不是很厚的指导手册，讲述如何找到自己“真正”想做的事</p>
+<p>作者在书中提出了 5 个阻碍行动的思维误区：</p>
+<p>🌀 不需要你一直都想做的事情，只需要是当下想做的事情，😭 这一点我真的是深有体会，我常常想的就是找个一辈子的爱好</p>
+<p>🌀 现实中不会有旁白告诉你：“从此历史的车轮开始转动”，改变的到来可能是一个非常平淡的日子，我就经常回去追求仪式感而凑整点……</p>
+<p>🌀 想做就只是想做，并不需要利他，只是说世界这么大，总会有人和你类似，需要你的帮助，价值就这么产生了</p>
+<p>🌀 和以前相比，现在的选择实在是太多太多了，一味的行动只会浪费更多时间</p>
+<p>🌀 想做的事情并非不能成为工作，只是要区分好工作目的和喜欢的事情</p>
+<p>/</p>
+<p>作者还提出了一个指导公式：</p>
+<p>喜欢的事 ➕ 擅长的事 ➕ 重要的事 = 真正想做的事</p>
+<p>🌀 喜欢的事让你保持热情<br>🌀 擅长的事让你获得成果和财富<br>🌀 重要的事指导你进行选择</p>
+<p>作者并没有在书中空谈理想，而是通过一系列的问题和思维模型，指导读者写出真正想做的事。</p>
+<p>/</p>
+<p>跟随书中的指导，我为自己列出了以下的内容：</p>
+<p>🌀 价值观：自由、探索、创造、成就、助人</p>
+<p>🌀 擅长的：学习、思考、整理、表达、共情、耐心、创新、反省、责任、审慎、助人、构建</p>
+<p>🌀 喜欢的：编程、设计、阅读、写作、自我认知、手工、雕刻、宠物、心理学、经济学、文学……（😭 写不完，我真的对很多事情都感兴趣啊！！！）</p>
+<p>综合得到我真正想做的事 👇</p>
+<p>”通过阅读各种不同的书籍和输出有帮助的内容来帮助和我有相同问题的人，从而获得感谢和成就感。“</p>
+<p>而基于我个人目前的需求，我将当下的阅读主题定为个人成长当中的自我认知。</p>
+<p>/</p>
+<p>☝️ 以上，就是我为什么成为一个博主的原因</p>
+]]></content>
+      <categories>
+        <category>books</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何下载美区 App Store 的应用</title>
     <url>/posts/97852533/</url>
     <content><![CDATA[<p>简单折腾一下 iPhone 的科学上网方式，以下仅记录期间会遇到的麻烦的点，对于在哪个网站注册 App Store ID 这种问题不过多描述。</p>
@@ -195,7 +236,7 @@
 <h3 id="打包-1"><a href="#打包-1" class="headerlink" title="打包"></a>打包</h3><ol>
 <li>需要先商店安装 xcode，不然会缺少 kits</li>
 <li>【可选】macOS 虚拟机卡顿严重，可以参考链接 9 优化一下</li>
-<li>配置 macdeployqt 命令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 插入以下内容后保存</span></span><br><span class="line"><span class="built_in">export</span> QT_DEPLOY_PATH=/Users/你的用户名/Qt/6.2.1/macos/bin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QT_DEPLOY_PATH</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证生效，看下有没有刚加入的路径</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span> </span><br></pre></td></tr></table></figure></li>
+<li>配置 macdeployqt 命令<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 插入以下内容后保存</span></span><br><span class="line"><span class="built_in">export</span> QT_DEPLOY_PATH=/Users/你的用户名/Qt/6.2.1/macos/bin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$QT_DEPLOY_PATH</span>:<span class="variable">$PATH</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证生效，看下有没有刚加入的路径</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span> </span><br></pre></td></tr></table></figure></li>
 <li>假设应用名称 TestApp，在Qt Creator 中 Release 模式运行一次</li>
 <li>找到 Release 路径，拷贝 TestApp 到同名文件夹</li>
 <li>移动到同名文件夹打开终端<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">macdeployqt TestApp.app -dmg</span><br></pre></td></tr></table></figure></li>
@@ -211,8 +252,8 @@
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
 <li>安装包 <a href="https://mirrors.tuna.tsinghua.edu.cn/qt/archive/qt/5.14/5.14.2/qt-opensource-linux-x64-5.14.2.run">qt-opensource-linux-x64-5.14.2.run</a>，如果不能拖拽需要通过 **虚拟机-安装 VMware Tools **来安装相关工具。</li>
 <li>然后双击安装，选择组件时记得选择 Qt5.14.2/Desktop gcc 64-bit</li>
-<li>【可选】更换 Ubuntu 的apt 镜像源为 <a href="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11ZMu5Np">阿里云ubuntu 镜像</a> ，具体更换步骤点进去查看，注意系统版本。下面方便使用复制了 18.04 的源。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将这个文件内容替换为以下内容</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>在终端中安装环境包<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install libqt4-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>【可选】更换 Ubuntu 的apt 镜像源为 <a href="https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11ZMu5Np">阿里云ubuntu 镜像</a> ，具体更换步骤点进去查看，注意系统版本。下面方便使用复制了 18.04 的源。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将这个文件内容替换为以下内容</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>在终端中安装环境包<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get upgrade</span><br><span class="line"><span class="built_in">sudo</span> apt-get install build-essential</span><br><span class="line"><span class="built_in">sudo</span> apt-get install libqt4-dev</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li>创建一个项目试试看吧</li>
 </ol>
 <h3 id="打包-linuxdeployqt"><a href="#打包-linuxdeployqt" class="headerlink" title="打包 linuxdeployqt"></a>打包 linuxdeployqt</h3><ol>
@@ -221,7 +262,7 @@
 <li><p>配置 linuxdeployqt 命令</p>
 </li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重命名</span></span><br><span class="line"><span class="built_in">mv</span> linuxdeployqt-continuous-x86_64.AppImage linuxdeployqt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动到用户的 bin 目录，就可以全局调用了</span></span><br><span class="line">sudo <span class="built_in">mv</span> linuxdeployqt /usr/local/bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试一下可用性</span></span><br><span class="line">linuxdeployqt --version</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重命名</span></span><br><span class="line"><span class="built_in">mv</span> linuxdeployqt-continuous-x86_64.AppImage linuxdeployqt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移动到用户的 bin 目录，就可以全局调用了</span></span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> linuxdeployqt /usr/local/bin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试一下可用性</span></span><br><span class="line">linuxdeployqt --version</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>配置Qt 环境变量</li>
@@ -240,7 +281,7 @@
 <li><p>在该文件夹中创建一个 default.desktop 文件夹和你要作为图标的图片，使用任意编辑器打开 default.desktop 写入下面内容，见下方</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=[app 打包后名称]</span><br><span class="line">Exec=AppRun %F</span><br><span class="line">Icon=图标名称</span><br><span class="line">Comment=一些描述</span><br><span class="line">Categories=Utility;</span><br></pre></td></tr></table></figure></li>
 <li><p>【可选】添加 <strong>libqgtk2 &amp; libqgtk2style</strong> ，避免一些打包错误</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if Error message</span></span><br><span class="line">WARNING: Plugin <span class="string">&quot;/usr/lib/x86_64-linux-gnu/qt4/plugins/platformthemes/libqgtk2.so&quot;</span> not found, skipping</span><br><span class="line">WARNING: Plugin <span class="string">&quot;/usr/lib/x86_64-linux-gnu/qt4/plugins/styles/libqgtk2style.so&quot;</span> not found, skipping</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fix 如果没有安装 git 请先执行 sudo apt-get install git 来安装</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get -y install libgtk2.0-dev</span><br><span class="line">git <span class="built_in">clone</span> http://code.qt.io/qt/qtstyleplugins.git</span><br><span class="line"><span class="built_in">cd</span> qtstyleplugins</span><br><span class="line">qmake</span><br><span class="line">make -j$(<span class="built_in">nproc</span>)</span><br><span class="line">sudo make install</span><br><span class="line"><span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># if Error message</span></span><br><span class="line">WARNING: Plugin <span class="string">&quot;/usr/lib/x86_64-linux-gnu/qt4/plugins/platformthemes/libqgtk2.so&quot;</span> not found, skipping</span><br><span class="line">WARNING: Plugin <span class="string">&quot;/usr/lib/x86_64-linux-gnu/qt4/plugins/styles/libqgtk2style.so&quot;</span> not found, skipping</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fix 如果没有安装 git 请先执行 sudo apt-get install git 来安装</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get -y install libgtk2.0-dev</span><br><span class="line">git <span class="built_in">clone</span> http://code.qt.io/qt/qtstyleplugins.git</span><br><span class="line"><span class="built_in">cd</span> qtstyleplugins</span><br><span class="line">qmake</span><br><span class="line">make -j$(<span class="built_in">nproc</span>)</span><br><span class="line"><span class="built_in">sudo</span> make install</span><br><span class="line"><span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure></li>
 <li><p>打开终端运行打包 ，这样我们得到打包后的 .AppImage 文件了，将它发送给其他人使用吧</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">linuxdeployqt TestApp -appimage</span><br></pre></td></tr></table></figure></li>
 </ol>

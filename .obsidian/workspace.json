@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scaffolds/post.md",
+                "file": "source/tags/index.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "scaffolds/post.md"
+                "file": "source/tags/index.md"
               }
             },
             "group": "9f0a313f02201f57"
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "scaffolds/post.md"
+                "file": "source/tags/index.md"
               }
             }
           },
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "scaffolds/post.md",
+                "file": "source/tags/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,9 +131,9 @@
   },
   "active": "c05da291af1e742c",
   "lastOpenFiles": [
+    "scaffolds/post.md",
     "scaffolds/page.md",
     "scaffolds/draft.md",
-    "scaffolds/post.md",
     "README.md",
     "source/_posts/uncategory",
     "public/images/iTerm2-config.png",

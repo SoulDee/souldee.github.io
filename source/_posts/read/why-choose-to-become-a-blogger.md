@@ -1,6 +1,8 @@
 ---
 title: 从一本书开始，选择成为博主
-tags: blog
+tags: 
+	- blog
+	- read
 abbrlink: f5ab715
 date: 2024-11-01 22:13:58
 ---

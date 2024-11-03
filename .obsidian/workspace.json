@@ -6,7 +6,7 @@
       {
         "id": "5d4925885f9b0621",
         "type": "tabs",
-        "dimension": 82.02099737532808,
+        "dimension": 83.96161754626456,
         "children": [
           {
             "id": "c05da291af1e742c",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/tags/index.md",
+                "file": "source/_posts/read/anti-internal-friction.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -27,7 +27,7 @@
       {
         "id": "a187355af399fc98",
         "type": "tabs",
-        "dimension": 17.979002624671917,
+        "dimension": 16.038382453735437,
         "children": [
           {
             "id": "e2cdfa6ad152e056",
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/tags/index.md"
+                "file": "source/_posts/read/anti-internal-friction.md"
               }
             },
             "group": "9f0a313f02201f57"
@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 417.5
   },
   "right": {
     "id": "a3e13e86c419dc9d",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/tags/index.md"
+                "file": "source/_posts/read/anti-internal-friction.md"
               }
             }
           },
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/tags/index.md",
+                "file": "source/_posts/read/anti-internal-friction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,6 +131,9 @@
   },
   "active": "c05da291af1e742c",
   "lastOpenFiles": [
+    "source/_posts/read/anti-internal-friction.md",
+    "source/_posts/read/why-choose-to-become-a-blogger.md",
+    "source/tags/index.md",
     "scaffolds/post.md",
     "scaffolds/page.md",
     "scaffolds/draft.md",
@@ -173,9 +176,6 @@
     "node_modules/@yuque/sdk/node_modules/ms/readme.md",
     "node_modules/@yuque/sdk/node_modules/ms/license.md",
     "node_modules/bcrypt-pbkdf/README.md",
-    "node_modules/bcrypt-pbkdf/CONTRIBUTING.md",
-    "node_modules/asn1/README.md",
-    "node_modules/assert-plus/CHANGES.md",
-    "node_modules/assert-plus/README.md"
+    "node_modules/bcrypt-pbkdf/CONTRIBUTING.md"
   ]
 }

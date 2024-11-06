@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/read/anti-internal-friction.md",
+                "file": "source/_posts/read/how-to-read-a-book.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -35,7 +35,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/read/anti-internal-friction.md"
+                "file": "source/_posts/read/how-to-read-a-book.md"
               }
             },
             "group": "9f0a313f02201f57"
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source/_posts/read/anti-internal-friction.md"
+                "file": "source/_posts/read/how-to-read-a-book.md"
               }
             }
           },
@@ -108,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source/_posts/read/anti-internal-friction.md",
+                "file": "source/_posts/read/how-to-read-a-book.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,6 +132,7 @@
   "active": "c05da291af1e742c",
   "lastOpenFiles": [
     "source/_posts/read/anti-internal-friction.md",
+    "source/_posts/read/how-to-read-a-book.md",
     "source/_posts/read/why-choose-to-become-a-blogger.md",
     "source/tags/index.md",
     "scaffolds/post.md",
@@ -175,7 +176,6 @@
     "node_modules/common-bin/node_modules/ms/license.md",
     "node_modules/@yuque/sdk/node_modules/ms/readme.md",
     "node_modules/@yuque/sdk/node_modules/ms/license.md",
-    "node_modules/bcrypt-pbkdf/README.md",
-    "node_modules/bcrypt-pbkdf/CONTRIBUTING.md"
+    "node_modules/bcrypt-pbkdf/README.md"
   ]
 }

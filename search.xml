@@ -166,7 +166,7 @@
     <url>/posts/5d9ec39b/</url>
     <content><![CDATA[<p>两年前我在某个成长播客听到了《臣服实验》这本书，当时的我带着觉醒的期待打开了这本书，然后带着满心的疑惑留下略带贬义的评价：</p>
 <p>“一个被时代浪潮推上顶峰的幸运儿，将自己的成功全都归因到‘臣服’上。”</p>
-<!-- moer -->
+<span id="more"></span>
 
 <p>两年后的今天，我正处于探索新领域的焦虑当中，对未知充满了恐惧，并不断自我苛责，内耗是我的日常。</p>
 <p>此时再一次听到了“臣服实验”的时候有了不一样的体会。</p>
@@ -192,6 +192,33 @@
       <tags>
         <tag>read</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>读了很多书，但我并不懂的如何读书</title>
+    <url>/posts/ebb9be30/</url>
+    <content><![CDATA[<p>当我翻开这本书的时候，我的想法同译者在译序所说的一般：如果我在初高中青少年时期，就能读到这本有关如何读书的书，那我会少走多少阅读的冤枉路？</p>
+<span id="more"></span>
+
+<p>我一直以来对于阅读的看法都是，不就是拿起一本书，然后看完就好了，这不是很简单的一件事情吗？真的有必要去专门的学习如何阅读吗？</p>
+<p>但这样的想法导致的结果就是，我经常看完一本书，就忘得一干二净，当有人让我向他推荐某本书的时候，我也只能是说出一个书名，又或者里面的一两句金句名言，然后就支支吾吾的说不出个所以然来，那么对方又怎么能够被我说服，从而去阅读我推荐给他的一本书呢？</p>
+<p>于是我可以得出一个结论，我只是看过这本书，而这本书并不是真正的属于我，它对我而言只是一个消遣的读物，可我最开始的阅读目的并不是如此，我之所以阅读是因为想要获得知识，又或者获得思想上的启发，而不仅仅是消遣。</p>
+<p>当然，并不是说不能以消遣为目的去阅读，只是如果说你阅读的目的不仅仅是消遣，那么就需要学习一些本书中的技巧，来将一本书真正的变成你的思想上的所有物，而不仅仅是物理意义上的所有物，既陈列在书架上的书。</p>
+<p>接下来简单介绍一下这本书：</p>
+<p>📖《如何阅读一本书》</p>
+<p>✒️ 莫提默·J.艾德勒 查尔斯·范多伦</p>
+<p>这是一本实用的书籍，作者想要做的就是教会你如何阅读，在书中作者将阅读分成了四个层次：基础阅读、检视阅读、分析阅读和主题阅读，每个层次都有其特定的目标与方法，通过每个层次提供的技巧让我们能够高效的阅读，其中包含但不限定于回答了以下的内容：</p>
+<p>⬛ 如果快速的知道一本书值不值得读？我们的时间是有限的，不应该将其浪费在不值得读的作品上。</p>
+<p>⬛ 阅读一本书的速度应该是快还是慢？太快可能无法理解，太慢又可能浪费时间。</p>
+<p>⬛ 让一本书真正属于你需要回答哪些问题？又如何做笔记？</p>
+<p>⬛ 如何公正的评价一本书？我们不应该带着偏见去阅读。</p>
+<p>⬛ 阅读不同的读物都应该用什么方法去阅读？历史、社科、哲学、想象文学，读不同的书要用不同的方式。</p>
+<p>此外，在书中除了帮助我们解决如何阅读的难题，还列出一个长达 20 页的书单，来为我们解决读什么这个问题。</p>
+<p>总之，如果你也想要让一本书真正的属于你，想要学会如何阅读的话，请去看这本书吧，将它摆在床头不断翻阅，至少在你学会阅读之前如此。</p>
+<p>最后，我是夏北游，每天进步一点点的夏北游。</p>
+]]></content>
+      <categories>
+        <category>read</category>
+      </categories>
   </entry>
   <entry>
     <title>从一本书开始，选择成为博主</title>
@@ -235,6 +262,64 @@
       <tags>
         <tag>read</tag>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iTerm2 终端配置</title>
+    <url>/posts/5e0a8950/</url>
+    <content><![CDATA[<p>最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。</p>
+<span id="more"></span>
+
+<p>放一张效果图 <img data-src="/images/iTerm2-config.png" alt="iTerm2 config"></p>
+<h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><p><em><a href="https://iterm2.com/">iTerm2</a></em> 下载打开即可安装</p>
+<p><em><a href="https://ohmyz.sh/">Oh My ZSH!</a></em> 是 <em>zsh</em> 的配置管理工具，使用命令行安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># curl</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># wget , install wget before ohmyzsh if you using wget</span></span><br><span class="line">brew install wget</span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p>首先配置一个 zsh 的渲染主题（不是文字颜色主题），从 <em><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">Theme wiki</a></em> 中选择一个你喜欢的主题的名称，这里选择 <em>agnoster</em> ，然后配置主题。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. Open config file</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. find and change ZSH_THEME field.</span></span><br><span class="line">ZSH_THEME=<span class="string">&quot;agnoster&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>接着安装一些功能插件，从 <em><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">Plugins wiki</a></em> 找到需要的插件下载，或者搜一下 <em><a href="https://github.com/search?q=zsh">zsh - Github</a></em> 看一下，下面用两个插件示范。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. Download plugins</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Open config file</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Find and change Plugins field.</span></span><br><span class="line">plugins=(zsh-autosuggestions zsh-syntax-highlighting)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. Add starter in the end</span></span><br><span class="line"><span class="built_in">source</span> ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line"><span class="built_in">source</span> ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 没有这个会导致原始环境变量失效</span></span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>经过上面配置后再次打开 iTerm2 后就会有自动补全和代码高亮的效果。</p>
+<h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><p>字体在显示效果中也很重要。安装 <em><a href="https://github.com/powerline/fonts">Powerline - Github</a></em> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git --depth 1</span><br><span class="line"><span class="built_in">cd</span> fonts</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+
+<p>打开 <em>iTerm2</em> ，进入到文字设置标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Text</em> 找到 <em>font</em> 选项，选择名称后缀为 <em>for Powerline</em> 的任意字体。</p>
+<p>将 <em>Text Rendering</em> 选项的 <em>Use build-in Powerline glyphs</em> 勾选上，不然会出现乱码。</p>
+<h2 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h2><p>适当的透明度和失焦能够带来很好的观感。进入到窗口标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Window</em>。</p>
+<p>通过对属性 <em>Transparency</em> 的调整来修改窗口透明度，不需要太高，个人设置 20 左右。</p>
+<p>通过对属性 <em>Blur</em> 的调整修改失焦，类似玻璃效果，个人设置 16 左右。</p>
+<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>最后我们还要设置一下各种文本的显示颜色，进入颜色标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Colors</em> 。</p>
+<p>右下角 <em>Color Presets</em> 选择任意喜欢的主题，然后基于这个主题进行调整，<em>Basic Colors</em> 主要是基本颜色，右边的 <em>ANSI Colors</em> 则是各种状态的颜色，例如链接，命令，文件，补全文本等等，可以直接修改，iTerm2 会实时变更的。</p>
+<p>如果你只想要更多的配色，而不想要自己慢慢调整，那么可以看看 <em><a href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2-Color-Schemes</a></em> ，里面的主题不仅仅能用在 iTerm2 中。</p>
+<p>如果只想要一个主题并不想下载全部内容，可以在 <a href="https://iterm2colorschemes.com/">iterm2colorschemes</a> 查看，找到喜欢的主题之后右键保存到本地为 .itermcolors 文件。</p>
+<p>如果想要全部一次性下载（通常来说这没有必要），也可以在上述网站右上角下载或者直接 clone 整个仓库。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#  Download iT er m-Color-Schemes</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth 1</span><br></pre></td></tr></table></figure>
+
+<p>在项目中找到想要的主题的名字，例如 <em>3024 Day</em></p>
+<p>通过 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Colors</em> 中右下角 <em>Color Presets&gt;Import</em> ,然后选择 <em>Term2-Color-Schemes&gt;schemes&gt;3024 Day.itermcolors</em> 文件。</p>
+<p>或者也可以按住 <em>shift/command</em> 进行多选打开多个主题。</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="https://iterm2.com/">iTerm2</a></li>
+<li><a href="https://ohmyz.sh/">Oh My ZSH!</a></li>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki">onmyzsh wiki - Github</a></li>
+<li><a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions - Github</a></li>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">zsh-syntax-highlighting - Github</a></li>
+<li><a href="https://github.com/powerline/fonts">Powerline - Github</a></li>
+<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2-Color-Schemes - Github</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>Terminal</tag>
+        <tag>macOS</tag>
+        <tag>iTerm2</tag>
+        <tag>Theme</tag>
+        <tag>Font</tag>
       </tags>
   </entry>
   <entry>
@@ -343,64 +428,6 @@
       <tags>
         <tag>Qt</tag>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iTerm2 终端配置</title>
-    <url>/posts/5e0a8950/</url>
-    <content><![CDATA[<p>最近因为工作的原因，需要配置 macOS 的环境，terminal 算是开发环境中非常常用的了。</p>
-<span id="more"></span>
-
-<p>放一张效果图 <img data-src="/images/iTerm2-config.png" alt="iTerm2 config"></p>
-<h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><p><em><a href="https://iterm2.com/">iTerm2</a></em> 下载打开即可安装</p>
-<p><em><a href="https://ohmyz.sh/">Oh My ZSH!</a></em> 是 <em>zsh</em> 的配置管理工具，使用命令行安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># curl</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># wget , install wget before ohmyzsh if you using wget</span></span><br><span class="line">brew install wget</span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)</span>&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p>首先配置一个 zsh 的渲染主题（不是文字颜色主题），从 <em><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">Theme wiki</a></em> 中选择一个你喜欢的主题的名称，这里选择 <em>agnoster</em> ，然后配置主题。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. Open config file</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. find and change ZSH_THEME field.</span></span><br><span class="line">ZSH_THEME=<span class="string">&quot;agnoster&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>接着安装一些功能插件，从 <em><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins">Plugins wiki</a></em> 找到需要的插件下载，或者搜一下 <em><a href="https://github.com/search?q=zsh">zsh - Github</a></em> 看一下，下面用两个插件示范。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. Download plugins</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Open config file</span></span><br><span class="line">vim ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Find and change Plugins field.</span></span><br><span class="line">plugins=(zsh-autosuggestions zsh-syntax-highlighting)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. Add starter in the end</span></span><br><span class="line"><span class="built_in">source</span> ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line"><span class="built_in">source</span> ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 没有这个会导致原始环境变量失效</span></span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
-
-<p>经过上面配置后再次打开 iTerm2 后就会有自动补全和代码高亮的效果。</p>
-<h2 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h2><p>字体在显示效果中也很重要。安装 <em><a href="https://github.com/powerline/fonts">Powerline - Github</a></em> </p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git --depth 1</span><br><span class="line"><span class="built_in">cd</span> fonts</span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
-
-<p>打开 <em>iTerm2</em> ，进入到文字设置标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Text</em> 找到 <em>font</em> 选项，选择名称后缀为 <em>for Powerline</em> 的任意字体。</p>
-<p>将 <em>Text Rendering</em> 选项的 <em>Use build-in Powerline glyphs</em> 勾选上，不然会出现乱码。</p>
-<h2 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h2><p>适当的透明度和失焦能够带来很好的观感。进入到窗口标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Window</em>。</p>
-<p>通过对属性 <em>Transparency</em> 的调整来修改窗口透明度，不需要太高，个人设置 20 左右。</p>
-<p>通过对属性 <em>Blur</em> 的调整修改失焦，类似玻璃效果，个人设置 16 左右。</p>
-<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><p>最后我们还要设置一下各种文本的显示颜色，进入颜色标签 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Colors</em> 。</p>
-<p>右下角 <em>Color Presets</em> 选择任意喜欢的主题，然后基于这个主题进行调整，<em>Basic Colors</em> 主要是基本颜色，右边的 <em>ANSI Colors</em> 则是各种状态的颜色，例如链接，命令，文件，补全文本等等，可以直接修改，iTerm2 会实时变更的。</p>
-<p>如果你只想要更多的配色，而不想要自己慢慢调整，那么可以看看 <em><a href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2-Color-Schemes</a></em> ，里面的主题不仅仅能用在 iTerm2 中。</p>
-<p>如果只想要一个主题并不想下载全部内容，可以在 <a href="https://iterm2colorschemes.com/">iterm2colorschemes</a> 查看，找到喜欢的主题之后右键保存到本地为 .itermcolors 文件。</p>
-<p>如果想要全部一次性下载（通常来说这没有必要），也可以在上述网站右上角下载或者直接 clone 整个仓库。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#  Download iT er m-Color-Schemes</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/mbadolato/iTerm2-Color-Schemes.git --depth 1</span><br></pre></td></tr></table></figure>
-
-<p>在项目中找到想要的主题的名字，例如 <em>3024 Day</em></p>
-<p>通过 <em>Profiles&gt;Open Profiles&gt;Edit Profiles&gt;Colors</em> 中右下角 <em>Color Presets&gt;Import</em> ,然后选择 <em>Term2-Color-Schemes&gt;schemes&gt;3024 Day.itermcolors</em> 文件。</p>
-<p>或者也可以按住 <em>shift/command</em> 进行多选打开多个主题。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><a href="https://iterm2.com/">iTerm2</a></li>
-<li><a href="https://ohmyz.sh/">Oh My ZSH!</a></li>
-<li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki">onmyzsh wiki - Github</a></li>
-<li><a href="https://github.com/zsh-users/zsh-autosuggestions">zsh-autosuggestions - Github</a></li>
-<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">zsh-syntax-highlighting - Github</a></li>
-<li><a href="https://github.com/powerline/fonts">Powerline - Github</a></li>
-<li><a href="https://github.com/mbadolato/iTerm2-Color-Schemes">iTerm2-Color-Schemes - Github</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>code</category>
-        <category>tools</category>
-      </categories>
-      <tags>
-        <tag>Terminal</tag>
-        <tag>macOS</tag>
-        <tag>iTerm2</tag>
-        <tag>Theme</tag>
-        <tag>Font</tag>
       </tags>
   </entry>
   <entry>

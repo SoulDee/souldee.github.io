@@ -4,34 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5d4925885f9b0621",
+        "id": "abdb264de158b8c6",
         "type": "tabs",
-        "dimension": 83.96161754626456,
         "children": [
           {
-            "id": "c05da291af1e742c",
+            "id": "e833431c767f04dc",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
-            },
-            "group": "9f0a313f02201f57"
-          }
-        ]
-      },
-      {
-        "id": "a187355af399fc98",
-        "type": "tabs",
-        "dimension": 16.038382453735437,
-        "children": [
-          {
-            "id": "e2cdfa6ad152e056",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {}
-            },
-            "group": "9f0a313f02201f57"
+            }
           }
         ]
       }
@@ -103,24 +85,41 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "b0c26767c9520f0f",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
-      "graph:查看关系图谱": false
+      "graph:查看关系图谱": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4812a93b93ce9eca",
+  "active": "e833431c767f04dc",
   "lastOpenFiles": [
+    "source/_posts/学习/learn-in-duolingguo.md",
+    "source/_posts/博客/how-install-app-of-us.md",
+    "source/_posts/编程/qt/deploy-with-qt.md",
+    "source/_posts/编程/工具/windows-terminal-config.md",
+    "source/_posts/编程/工具/macos-on-vmware.md",
+    "source/_posts/编程/工具/iterm2-config.md",
+    "images/iTerm2-config.png.md",
+    "images",
+    "source/_posts/游戏/human-resource-machine-01.md",
     "source/_posts/read/how-to-read-a-book.md",
     "source/_posts/read/the-grass-roots-came-back.md",
     "source/_posts/read/be-a-demanding-reader.md",
@@ -143,7 +142,6 @@
     "public/js/third-party/analytics",
     "public/js/third-party",
     "public/js/utils.js",
-    "public/js/pjax.js",
     "public/images/favicon-32x32-next.png",
     "public/images/favicon-16x16-next.png",
     "public/images/favicon.svg",
@@ -158,14 +156,6 @@
     "node_modules/aws4/README.md",
     "node_modules/color-name/README.md",
     "node_modules/acorn-walk/README.md",
-    "node_modules/acorn-walk/CHANGELOG.md",
-    "node_modules/ast-types/README.md",
-    "node_modules/agentkeepalive/README.md",
-    "node_modules/agentkeepalive/History.md",
-    "node_modules/ansi-styles/node_modules/color-convert/README.md",
-    "node_modules/ansi-styles/node_modules/color-convert/CHANGELOG.md",
-    "node_modules/common-bin/node_modules/ms/readme.md",
-    "node_modules/common-bin/node_modules/ms/license.md",
-    "node_modules/@yuque/sdk/node_modules/ms/readme.md"
+    "node_modules/acorn-walk/CHANGELOG.md"
   ]
 }
